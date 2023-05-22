@@ -15,8 +15,10 @@ section {
 
 /* Kategorier */
 
-.shopAlt img {
+.kategorier img {
   width: 100%;
 }
 
 /* lav grid til kategorier og brug gridarea når der skal sættes tekst på billeder! */
+
+/* Ved desktop version skal der order på for at billederne kommer i den rigtige rækkefølge */
