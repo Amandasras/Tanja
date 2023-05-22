@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Til at sætte tekst ind på baggrundsbilledet, men i tvivl om hvordan det gør med navigationen */
+section {
+  display: grid;
+}
+
+img {
+  min-width: 100%;
+  object-fit: cover;
+  margin-bottom: 3rem;
+}
