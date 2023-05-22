@@ -2,15 +2,16 @@
 const { variant } = Astro.props;
 ---
 
-<article class={variant}>
+<section class={variant}>
   <slot />
-</article>
+</section>
 
 <style>
-  img {
-    min-width: 100%;
-    object-fit: cover;
+  . img {
+    max-width: 100%;
     margin-bottom: 3rem;
+    overflow: hidden;
+    margin-left: 3rem;
   }
   .primary {
     margin-left: ;
