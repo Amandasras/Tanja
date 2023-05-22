@@ -8,8 +8,15 @@ section {
   display: grid;
 }
 
-img {
+.blaFugl img {
   min-width: 100%;
-  object-fit: cover;
   margin-bottom: 3rem;
 }
+
+/* Kategorier */
+
+.shopAlt img {
+  width: 100%;
+}
+
+/* lav grid til kategorier og brug gridarea når der skal sættes tekst på billeder! */
