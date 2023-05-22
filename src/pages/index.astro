@@ -1,5 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro";
+import Card from "../components/Card.astro";
+import "../styles/style.css";
+import Button from "../components/Button.astro";
 ---
 
 <html lang="en">
@@ -8,9 +11,18 @@ import Navigation from "../components/Navigation.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
+      repellendus reprehenderit iusto minima consequatur dolor neque. Ipsum,
+      praesentium fugit officia tempore officiis ea aliquam numquam debitis
+      optio quisquam vel minus.
+    </p>
+    <Button variant="primary" size="small">TEXT</Button>
+    <Button variant="secondary" size="medium">TEXT</Button>
+    <Button variant="secondary" size="large">TEXT</Button>
   </body>
 </html>

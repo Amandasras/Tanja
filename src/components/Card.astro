@@ -1,11 +1,11 @@
 ---
+const { header } = Astro.props;
 ---
 
 <!-- Dette er et card til produkterne på produktsiden -->
 <article>
-  <img src="" alt="" />
-  <h2>Titel på produkt</h2>
-  <button>Shop produkt</button>
+  <h2>{header}</h2>
+  <slot />
 </article>
 
 <style></style>
