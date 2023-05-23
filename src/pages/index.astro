@@ -10,10 +10,10 @@ import Footer from "../components/Footer.astro";
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://use.typekit.net/poq5gae.css">
+    <link rel="stylesheet" href="https://use.typekit.net/poq5gae.css" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>forside</title>
+    <title>Forside</title>
   </head>
   <body>
     <main>
@@ -23,13 +23,14 @@ import Footer from "../components/Footer.astro";
 
       <article class="passionstekst">
         <p>
-          At tage på oplevelse i en verden af illusioner. Jeg arbejder med at
-          skabe stemninger og vække følelser hos folk. Beskueren må meget gerne
-          undres. At det flade lærred kan vokse ud, og blive en form for
-          installation eller levende genstand i rummet. At beskueren drages og
-          “bedrages” og det umiddelbare liv der skabes, med teknikker, flid og
-          mit kunstnerisk billed univers, kommer til live.
+          Jeg arbejder med at skabe stemninger og vække følelser hos folk.
+          Beskueren må meget gerne undres. At det flade lærred kan vokse ud, og
+          blive en form for installation eller levende genstand i rummet. At
+          beskueren drages og “bedrages” og det umiddelbare liv der skabes, med
+          teknikker, flid og mit kunstnerisk billed univers, kommer til live.
         </p>
+        <i>"At tage på oplevelse i en verden af illusioner"</i>
+
         <p>
           Mine inspirationskilder ligger først og fremmest i det klassiske
           trompe l´oeil-maleri. En type maleri, kendt siden antikken, hvor man
@@ -41,7 +42,7 @@ import Footer from "../components/Footer.astro";
       <section class="kategorier">
         <article class="shopAlt">
           <img src="../billeder/shopAlt.webp" alt="Shop Alt" />
-          <Button variant="primary" size="small">SHOP ALT</Button>
+          <Button id="shopAlt" variant="primary" size="small">SHOP ALT</Button>
         </article>
         <article class="tilmeldKurser">
           <img src="../billeder/kursus.png" alt="Kurser" />
@@ -55,7 +56,7 @@ import Footer from "../components/Footer.astro";
         </article>
         <article class="shopSaettekasser">
           <img src="../billeder/shopKasser.webp" alt="Sættekasser" />
-          <Button variant="primary" size="medium">SHOP SÆTTEKASSER</Button>
+          <Button variant="primary" size="large">SHOP SÆTTEKASSER</Button>
         </article>
 
         <article class="shopPortraetter">
@@ -70,7 +71,7 @@ import Footer from "../components/Footer.astro";
 
         <article class="shopUnika">
           <img src="../billeder/shopUnika.webp" alt="Unika" />
-          <h3>SHOP UNIKA</h3>
+          <Button variant="primary" size="medium">SHOP UNIKA</Button>
         </article>
         <article class="shopKunsttryk">
           <img src="../billeder/shopTryk.webp" alt="Kunsttryk" />

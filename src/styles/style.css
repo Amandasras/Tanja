@@ -2,13 +2,12 @@
   padding: 0;
   margin: 0;
 }
-:root{
+:root {
   /* Font */
   font-family: "montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 
 /* Til at sætte tekst ind på baggrundsbilledet, men i tvivl om hvordan det gør med navigationen */
 
@@ -17,8 +16,10 @@
   margin-bottom: 2rem;
 }
 
-.passionstekst p {
-  margin: 1rem 0 1rem 3rem;
+.passionstekst p,
+i {
+  text-align: center;
+  /* margin: 1rem 0 1rem 3rem; */
   max-width: 22em;
 }
 /* ------------------------------------------------------------------------------ */
@@ -80,11 +81,11 @@ p {
   display: grid;
 }
 .shopUnika > img,
-h3 {
+Button {
   grid-area: 1/1;
 }
-.shopUnika > h3 {
-  margin: 85% 0 0 54%;
+.shopUnika > Button {
+  margin: 85% 0 0 51%;
   color: white;
   /* font-family: ; */
 }

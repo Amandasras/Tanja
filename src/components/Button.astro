@@ -17,8 +17,9 @@ const { variant, size } = Astro.props;
     background-color: transparent;
     border-radius: 0.3rem;
     font-family: "montserrat", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
+    cursor: pointer;
   }
 
   .secondary {
@@ -34,10 +35,24 @@ const { variant, size } = Astro.props;
 
   .medium {
     font-size: 0.8rem;
+    width: 32vw;
+    height: 4.5vh;
+  }
+
+  .large {
+    font-size: 0.8rem;
     width: 45vw;
     height: 4.5vh;
   }
-  .large {
-    font-size: 3rem;
-  }
 </style>
+
+<script>
+  // Find knappen ved hjælp af dens id
+  var button = document.getElementById("shopAlt");
+
+  // Tilføj en eventlytter til knappen
+  button.addEventListener("click", function () {
+    // Før brugeren videre til en anden side
+    window.location.href = "/product"; // Erstat med din ønskede URL
+  });
+</script>
