@@ -4,21 +4,92 @@
 }
 
 /* Til at sætte tekst ind på baggrundsbilledet, men i tvivl om hvordan det gør med navigationen */
-section {
-  display: grid;
-}
 
 .blaFugl img {
   min-width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
-/* Kategorier */
+.passionstekst p {
+  margin: 1rem 0 1rem 3rem;
+  max-width: 22em;
+}
+/* ------------------------------------------------------------------------------ */
+
+/*------------------------------- Kategorier -------------------------------------*/
 
 .kategorier img {
   width: 100%;
+  margin-top: 2rem;
 }
 
 /* lav grid til kategorier og brug gridarea når der skal sættes tekst på billeder! */
+
+.shopAlt {
+  display: grid;
+}
+.shopAlt > img,
+Button {
+  grid-area: 1/1;
+}
+.shopAlt > Button {
+  margin: 85% 0 0 23%;
+}
+
+.tilmeldKurser {
+  margin: 4rem;
+}
+
+.tilmeldKurser h3,
+p {
+  text-align: center;
+  margin: 1rem;
+}
+
+.shopSaettekasser {
+  display: grid;
+}
+.shopSaettekasser > img,
+Button {
+  grid-area: 1/1;
+}
+.shopSaettekasser > Button {
+  margin: 100% 0 0 45%;
+  color: white;
+  /* font-family: ; */
+}
+
+.shopPortraetter {
+  margin: 4rem;
+}
+
+.shopPortraetter h3,
+p {
+  text-align: center;
+  margin: 1rem;
+}
+
+.shopUnika {
+  display: grid;
+}
+.shopUnika > img,
+h3 {
+  grid-area: 1/1;
+}
+.shopUnika > h3 {
+  margin: 85% 0 0 54%;
+  color: white;
+  /* font-family: ; */
+}
+
+.shopKunsttryk {
+  margin: 4rem;
+}
+
+.shopKunsttryk h3,
+p {
+  text-align: center;
+  margin: 1rem;
+}
 
 /* Ved desktop version skal der order på for at billederne kommer i den rigtige rækkefølge */

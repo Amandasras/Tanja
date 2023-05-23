@@ -5,13 +5,17 @@ const { variant, size } = Astro.props;
 <button class={variant + " " + size}><slot /></button>
 
 <style>
-  button {
+  /* button {
     padding: 1rem;
     border-radius: 1rem;
-  }
+    width: 25%;
+    height: 50px;
+  } */
   .primary {
-    background-color: blue;
+    border: 1.5px solid white;
     color: white;
+    background-color: transparent;
+    border-radius: 0.3rem;
   }
 
   .secondary {
@@ -20,11 +24,15 @@ const { variant, size } = Astro.props;
   }
 
   .small {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    width: 23vw;
+    height: 4vh;
   }
 
   .medium {
-    font-size: 2rem;
+    font-size: 0.8rem;
+    width: 45vw;
+    height: 4.5vh;
   }
   .large {
     font-size: 3rem;

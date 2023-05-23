@@ -16,53 +16,69 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <main>
-      <section>
-        <div class="blaFugl">
-          <img src="../billeder/blafugl-lille.webp" alt="Bla fugl" />
-        </div>
-      </section>
+      <div class="blaFugl">
+        <img src="../billeder/blafugl-lille.webp" alt="Bla fugl" />
+      </div>
 
-      <p>
-        At tage på oplevelse i en verden af illusioner. Jeg arbejder med at
-        skabe stemninger og vække følelser hos folk. Beskueren må meget gerne
-        undres. At det flade lærred kan vokse ud, og blive en form for
-        installation eller levende genstand i rummet. At beskueren drages og
-        “bedrages” og det umiddelbare liv der skabes, med teknikker, flid og mit
-        kunstnerisk billed univers, kommer til live.
-      </p>
-      <p>
-        Mine inspirationskilder ligger først og fremmest i det klassiske trompe
-        l´oeil-maleri. En type maleri, kendt siden antikken, hvor man skildrer
-        objekter så realistisk, at de ser ud, som om de er virkelige. Ingen er
-        perfekte, rene i farven hele tiden. Nogen gange er vi primære, nogen
-        gange sekundære, og flest gange tiertære.
-      </p>
+      <article class="passionstekst">
+        <p>
+          At tage på oplevelse i en verden af illusioner. Jeg arbejder med at
+          skabe stemninger og vække følelser hos folk. Beskueren må meget gerne
+          undres. At det flade lærred kan vokse ud, og blive en form for
+          installation eller levende genstand i rummet. At beskueren drages og
+          “bedrages” og det umiddelbare liv der skabes, med teknikker, flid og
+          mit kunstnerisk billed univers, kommer til live.
+        </p>
+        <p>
+          Mine inspirationskilder ligger først og fremmest i det klassiske
+          trompe l´oeil-maleri. En type maleri, kendt siden antikken, hvor man
+          skildrer objekter så realistisk, at de ser ud, som om de er virkelige.
+          Ingen er perfekte, rene i farven hele tiden. Nogen gange er vi
+          primære, nogen gange sekundære, og flest gange tiertære.
+        </p>
+      </article>
       <section class="kategorier">
         <article class="shopAlt">
           <img src="../billeder/shopAlt.webp" alt="Shop Alt" />
-          <h3>SHOP ALT</h3>
+          <Button variant="primary" size="small">SHOP ALT</Button>
         </article>
         <article class="tilmeldKurser">
           <img src="../billeder/kursus.png" alt="Kurser" />
-          <h3></h3>
+          <h3>TILMELD KURSER</h3>
+          <p>
+            Jeg arrangerer kurser af forskellig art i mit eget atelier.  Mine
+            kurser henvender sig til alle, der kræves ingen forkundskaber.  Jeg
+            underviser i følgende - imitation af træ, overflader og marmor.
+          </p>
+          <!-- find video om buttons som component -->
         </article>
-        <article class="saettekasser">
+        <article class="shopSaettekasser">
           <img src="../billeder/shopKasser.webp" alt="Sættekasser" />
-          <h3></h3>
+          <Button variant="primary" size="medium">SHOP SÆTTEKASSER</Button>
         </article>
 
-        <article class="portraetter">
+        <article class="shopPortraetter">
           <img src="../billeder/portraetter.webp" alt="Portræt af dreng" />
-          <h3></h3>
+          <h3>SHOP PORTRÆTTER</h3>
+          <p>
+            Få lavet et håndtegnet portræt med blyant. En god portrættegning
+            skal ikke være en kopi af billedet.Det skal være unikt, personligt
+            og med lidt kant, men selvfølgelig skal det ligne.
+          </p>
         </article>
 
         <article class="shopUnika">
           <img src="../billeder/shopUnika.webp" alt="Unika" />
-          <h3></h3>
+          <h3>SHOP UNIKA</h3>
         </article>
-        <article class="kunstTryk">
+        <article class="shopKunsttryk">
           <img src="../billeder/shopTryk.webp" alt="Kunsttryk" />
-          <h3></h3>
+          <h3>SHOP KUNSTTRYK</h3>
+          <p>
+            Giclée print er en trykmetode, hvor der blækprintes i høj kvalitet
+            på akvarelpapir. Det produceres med vandbaseret blæk i mindst
+            9-trykfarver, og miljøvenligt.
+          </p>
         </article>
       </section>
     </main>
