@@ -11,6 +11,14 @@
 
 /* Til at sætte tekst ind på baggrundsbilledet, men i tvivl om hvordan det gør med navigationen */
 
+.splash {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.splash > Navigation,
+img {
+  grid-area: 1/1;
+}
 .blaFugl img {
   min-width: 100%;
   margin-bottom: 2rem;
