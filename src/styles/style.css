@@ -13,10 +13,9 @@
 
 .splash {
   display: grid;
-  grid-template-columns: 1fr 1fr;
 }
-.splash > Navigation,
-img {
+.splash > img,
+Navigation {
   grid-area: 1/1;
 }
 .blaFugl img {
