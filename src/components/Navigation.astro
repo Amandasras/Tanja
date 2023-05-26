@@ -3,16 +3,123 @@ import "../styles/style.css";
 ---
 
 <header>
+  <nav>
+     <div class="logo"></div>
+     <div class="burger-menu">&#9776;</div>
+     <ul class="menu">
+     <li> <a href="/index">OMADA.DELI</a></li>
+         <li><a href="/kurser">KURSER</a></li>
+         <li><a href="/produkter">PRODUKTER</a></li>
+         <li><a href="/ommig">OM MIG</a></li>
+         <li><a href="/kontakt">KONTAKT</a></li>
+     </ul>
+  </nav>
+</header>
+
+<style>
+  /* Mobile menu styling */
+
+  .orange{
+      color: #D83933;
+  }
+  .logo{
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+  }
+  .logo a{
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+      font-size: 30px;
+  }
+  .menu {
+      display: none;
+      left: 0;
+      z-index: 1;
+      margin-top: 10px;
+      text-align: center;
+  }
+  .menu.active {
+      display: block;
+  }
+  .menu li {
+      margin: 20px 0;
+      list-style-type: none;
+  }
+  li a {
+      font-family: aviano-sans, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: black;
+  }
+  .burger-menu {
+      display: block;
+      font-size: 28px;
+      color: black;
+      cursor: pointer;
+  }
+
+  /* Desktop menu styling */
+  @media screen and (min-width: 1000px) {
+  
+      .menu {
+          display: flex;
+          justify-content: left;
+          align-items: left;
+          font-family: ;
+          font-size: 14px;
+          color: black;
+          position: static;
+          margin-top: 0;
+      }
+      .menu li {
+          margin: 0 20px;
+          list-style-type: none;
+      }
+      .burger-menu {
+          display: none;
+      }
+  }
+</style>
+
+<script>
+  const burgerMenu = document.querySelector('.burger-menu');
+  const menu = document.querySelector('.menu');
+  const menuItems = document.querySelectorAll('.menu li');
+
+  burgerMenu.addEventListener('click', function() {
+      burgerMenu.classList.toggle('active');
+      menu.classList.toggle('active');
+  });
+
+  menuItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+          burgerMenu.classList.remove('active');
+          menu.classList.remove('active');
+      });
+  });
+
+  window.addEventListener('resize', function() {
+      if (window.innerWidth >= 1000) {
+          burgerMenu.classList.remove('active');
+          menu.classList.remove('active');
+      }
+  });
+</script>
+
+
+
+<!-- <header>
   <button class="hamburger" aria-label="Toggle Menu">
     <span></span>
     <span></span>
     <span></span>
   </button>
+
   <nav class="menu">
-    <button class="close-menu" aria-label="Close Menu">
-      <span></span>
-      <span></span>
-    </button>
     <ul class="links">
       <li><a href="/kurser">KURSER</a></li>
       <li><a href="/produkter">PRODUKTER</a></li>
@@ -21,10 +128,12 @@ import "../styles/style.css";
   </nav>
 </header>
 
-<style>
+
+
+ <style>
   .links a {
     color: black;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -33,9 +142,12 @@ import "../styles/style.css";
   }
   .links {
     margin-top: 5%;
+    list-style: none;
   }
 
-  @media screen and (max-width: 1000px) {
+
+
+  @media screen and (max-width: 800px) {
     header {
       display: flex;
       justify-content: flex-end;
@@ -134,7 +246,7 @@ import "../styles/style.css";
   hamburger.addEventListener("click", () => {
     menu.classList.toggle("active");
   });
-</script>
+</script> -->
 
 <!-- Prøvede at lave mobile first, virkede ikke. Derfor har vi kørt max width ved media query og byttet om på værdierne,
 så der er burgermenu ved mobile version og punkter ved desktop version -->
