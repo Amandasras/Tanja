@@ -1,87 +1,108 @@
 ---
 import "../styles/style.css";
 ---
-
 <header>
   <nav>
-     <div class="logo"></div>
-     <div class="burger-menu">&#9776;</div>
-     <ul class="menu">
-     <li> <a href="/index">OMADA.DELI</a></li>
-         <li><a href="/kurser">KURSER</a></li>
-         <li><a href="/produkter">PRODUKTER</a></li>
-         <li><a href="/ommig">OM MIG</a></li>
-         <li><a href="/kontakt">KONTAKT</a></li>
-     </ul>
+    <div class="menu-wrapper">
+      <button class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo">
+        <a href="/index">TANJA<br>KALEOVSKI</a>
+      </div>
+    </div>
+    <ul class="menu">
+      <li><a href="/kurser">KURSER</a></li>
+      <li><a href="/produkter">PRODUKTER</a></li>
+      <li><a href="/ommig">OM MIG</a></li>
+      <li><a href="/kontakt">KONTAKT</a></li>
+    </ul>
   </nav>
 </header>
 
 <style>
   /* Mobile menu styling */
 
-  .orange{
-      color: #D83933;
+  .menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
   }
-  .logo{
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-  }
+
   .logo a{
-      text-decoration: none;
-      color: black;
-      font-weight: 700;
-      font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 30px;
   }
+
   .menu {
-      display: none;
-      left: 0;
-      z-index: 1;
-      margin-top: 10px;
-      text-align: center;
+    display: none;
+    left: 0;
+    z-index: 1;
+    margin-top: 10px;
+    text-align: center;
   }
+
   .menu.active {
-      display: block;
+    display: block;
   }
+
   .menu li {
-      margin: 20px 0;
-      list-style-type: none;
+    margin: 20px 0;
+    list-style-type: none;
   }
+
   li a {
-      font-family: aviano-sans, sans-serif;
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-decoration: none;
-      color: black;
+    font-family: aviano-sans, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
   }
-  .burger-menu {
-      display: block;
-      font-size: 28px;
-      color: black;
-      cursor: pointer;
+
+  .burger-menu span{
+   
+    display: block;
+      width: 100%;
+      height: 4px;
+      background-color: rgb(0, 0, 0);
+      transition: all 0.3s ease-in-out;
   }
 
   /* Desktop menu styling */
-  @media screen and (min-width: 1000px) {
-  
-      .menu {
-          display: flex;
-          justify-content: left;
-          align-items: left;
-          font-family: ;
-          font-size: 14px;
-          color: black;
-          position: static;
-          margin-top: 0;
-      }
-      .menu li {
-          margin: 0 20px;
-          list-style-type: none;
-      }
-      .burger-menu {
-          display: none;
-      }
+  @media screen and (min-width: 800px) {
+    .menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-family: ;
+      font-size: 14px;
+      color: black;
+      position: static;
+      margin-top: 0;
+    }
+
+    .menu li {
+      margin: 0 20px;
+      list-style-type: none;
+    }
+
+    .logo {
+      order: 1;
+    }
+
+    .menu {
+      order: 2;
+    }
+
+    .burger-menu {
+      display: none;
+    }
   }
 </style>
 
@@ -91,24 +112,25 @@ import "../styles/style.css";
   const menuItems = document.querySelectorAll('.menu li');
 
   burgerMenu.addEventListener('click', function() {
-      burgerMenu.classList.toggle('active');
-      menu.classList.toggle('active');
+    burgerMenu.classList.toggle('active');
+    menu.classList.toggle('active');
   });
 
   menuItems.forEach(function(item) {
-      item.addEventListener('click', function() {
-          burgerMenu.classList.remove('active');
-          menu.classList.remove('active');
-      });
+    item.addEventListener('click', function() {
+      burgerMenu.classList.remove('active');
+      menu.classList.remove('active');
+    });
   });
 
   window.addEventListener('resize', function() {
-      if (window.innerWidth >= 1000) {
-          burgerMenu.classList.remove('active');
-          menu.classList.remove('active');
-      }
+    if (window.innerWidth >= 800) {
+      burgerMenu.classList.remove('active');
+      menu.classList.remove('active');
+    }
   });
 </script>
+
 
 
 
