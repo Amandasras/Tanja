@@ -1,91 +1,79 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import Card from "../components/Card.astro";
 import "../styles/style.css";
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://use.typekit.net/poq5gae.css" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Forside</title>
-  </head>
-  <body>
-    <main>
-      <div class="splash">
-        <Navigation />
-        <div class="blaFugl">
-          <img src="../billeder/blafugl-lille.webp" alt="Bla fugl" />
-        </div>
-      </div>
+<MainLayout>
+  <div class="splash">
+    <div class="blaFugl">
+      <img src="../billeder/blafugl-lille.webp" alt="Bla fugl" />
+    </div>
+  </div>
 
-      <article class="passionstekst">
-        <p>
-          Jeg arbejder med at skabe stemninger og vække følelser hos folk.
-          Beskueren må meget gerne undres. At det flade lærred kan vokse ud, og
-          blive en form for installation eller levende genstand i rummet. At
-          beskueren drages og “bedrages” og det umiddelbare liv der skabes, med
-          teknikker, flid og mit kunstnerisk billed univers, kommer til live.
-        </p>
-        <i>"At tage på oplevelse i en verden af illusioner"</i>
+  <article class="passionstekst">
+    <p>
+      Jeg arbejder med at skabe stemninger og vække følelser hos folk. Beskueren
+      må meget gerne undres. At det flade lærred kan vokse ud, og blive en form
+      for installation eller levende genstand i rummet. At beskueren drages og
+      “bedrages” og det umiddelbare liv der skabes, med teknikker, flid og mit
+      kunstnerisk billed univers, kommer til live.
+    </p>
+    <i>"At tage på oplevelse i en verden af illusioner"</i>
 
-        <p>
-          Mine inspirationskilder ligger først og fremmest i det klassiske
-          trompe l´oeil-maleri. En type maleri, kendt siden antikken, hvor man
-          skildrer objekter så realistisk, at de ser ud, som om de er virkelige.
-          Ingen er perfekte, rene i farven hele tiden. Nogen gange er vi
-          primære, nogen gange sekundære, og flest gange tiertære.
-        </p>
-      </article>
-      <section class="kategorier">
-        <article class="shopAlt">
-          <img src="../billeder/shopAlt.webp" alt="Shop Alt" />
-          <Button id="shopAlt" variant="primary" size="small">SHOP ALT</Button>
-        </article>
-        <article class="tilmeldKurser">
-          <img src="../billeder/kursus.png" alt="Kurser" />
-          <h3>TILMELD KURSER</h3>
-          <p>
-            Jeg arrangerer kurser af forskellig art i mit eget atelier.  Mine
-            kurser henvender sig til alle, der kræves ingen forkundskaber.  Jeg
-            underviser i følgende - imitation af træ, overflader og marmor.
-          </p>
-          <!-- find video om buttons som component -->
-        </article>
-        <article class="shopSaettekasser">
-          <img src="../billeder/shopKasser.webp" alt="Sættekasser" />
-          <Button variant="primary" size="large">SHOP SÆTTEKASSER</Button>
-        </article>
+    <p>
+      Mine inspirationskilder ligger først og fremmest i det klassiske trompe
+      l´oeil-maleri. En type maleri, kendt siden antikken, hvor man skildrer
+      objekter så realistisk, at de ser ud, som om de er virkelige. Ingen er
+      perfekte, rene i farven hele tiden. Nogen gange er vi primære, nogen gange
+      sekundære, og flest gange tiertære.
+    </p>
+  </article>
+  <section class="kategorier">
+    <article class="shopAlt">
+      <img src="../billeder/shopAlt.webp" alt="Shop Alt" />
+      <Button id="shopAlt" variant="primary" size="small">SHOP ALT</Button>
+    </article>
+    <article class="tilmeldKurser">
+      <img src="../billeder/kursus.png" alt="Kurser" />
+      <h3>TILMELD KURSER</h3>
+      <p>
+        Jeg arrangerer kurser af forskellig art i mit eget atelier.  Mine kurser
+        henvender sig til alle, der kræves ingen forkundskaber.  Jeg underviser
+        i følgende - imitation af træ, overflader og marmor.
+      </p>
+      <!-- find video om buttons som component -->
+    </article>
+    <article class="shopSaettekasser">
+      <img src="../billeder/shopKasser.webp" alt="Sættekasser" />
+      <Button variant="primary" size="large">SHOP SÆTTEKASSER</Button>
+    </article>
 
-        <article class="shopPortraetter">
-          <img src="../billeder/portraetter.webp" alt="Portræt af dreng" />
-          <h3>SHOP PORTRÆTTER</h3>
-          <p>
-            Få lavet et håndtegnet portræt med blyant. En god portrættegning
-            skal ikke være en kopi af billedet.Det skal være unikt, personligt
-            og med lidt kant, men selvfølgelig skal det ligne.
-          </p>
-        </article>
+    <article class="shopPortraetter">
+      <img src="../billeder/portraetter.webp" alt="Portræt af dreng" />
+      <h3>SHOP PORTRÆTTER</h3>
+      <p>
+        Få lavet et håndtegnet portræt med blyant. En god portrættegning skal
+        ikke være en kopi af billedet.Det skal være unikt, personligt og med
+        lidt kant, men selvfølgelig skal det ligne.
+      </p>
+    </article>
 
-        <article class="shopUnika">
-          <img src="../billeder/shopUnika.webp" alt="Unika" />
-          <Button variant="primary" size="medium">SHOP UNIKA</Button>
-        </article>
-        <article class="shopKunsttryk">
-          <img src="../billeder/shopTryk.webp" alt="Kunsttryk" />
-          <h3>SHOP KUNSTTRYK</h3>
-          <p>
-            Giclée print er en trykmetode, hvor der blækprintes i høj kvalitet
-            på akvarelpapir. Det produceres med vandbaseret blæk i mindst
-            9-trykfarver, og miljøvenligt.
-          </p>
-        </article>
-      </section>
-    </main>
-  </body>
-</html>
+    <article class="shopUnika">
+      <img src="../billeder/shopUnika.webp" alt="Unika" />
+      <Button variant="primary" size="medium">SHOP UNIKA</Button>
+    </article>
+    <article class="shopKunsttryk">
+      <img src="../billeder/shopTryk.webp" alt="Kunsttryk" />
+      <h3>SHOP KUNSTTRYK</h3>
+      <p>
+        Giclée print er en trykmetode, hvor der blækprintes i høj kvalitet på
+        akvarelpapir. Det produceres med vandbaseret blæk i mindst 9-trykfarver,
+        og miljøvenligt.
+      </p>
+    </article>
+  </section>
+  <MainLayout />
+</MainLayout>

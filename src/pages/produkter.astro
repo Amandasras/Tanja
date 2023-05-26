@@ -1,44 +1,29 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import Card from "../components/Card.astro";
 import "../styles/style.css";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Produktside</title>
-  </head>
-  <body>
-    <main>
-      <div class="splash">
-        <Navigation />
-        <div class="blaFugl">
-          <img
-            src="../produktbilleder/Kunsttryk/birdlife.webp"
-            alt="birdlife"
-          />
-        </div>
-      </div>
+<MainLayout>
+  <div class="splash">
+    <div class="blaFugl">
+      <img src="../produktbilleder/Kunsttryk/birdlife.webp" alt="birdlife" />
+    </div>
+  </div>
 
-      <article class="passionstekst">
-        <p>
-          Jeg tilbyder at male personlige sættekasser ud fra egne ønsker.  Disse
-          sættekasser bliver malet med en bestemt teknik, som giver en illusion
-          af ægte træ.  Det er op til dig, hvilke elementer, du ønsker, der skal
-          indgå i dit personlige maleri.  Kun fantasien sætter grænser.
-        </p>
-      </article>
-      <Card
-        header="Fugl på farten"
-        text="En flot sættekasse med brune og blå nuancer"
-        button="Tilføj til kurv"
-      >
-        <img src="" alt="" />
-      </Card>
-    </main>
-  </body>
-</html>
+  <article class="passionstekst">
+    <p>
+      Jeg tilbyder at male personlige sættekasser ud fra egne ønsker.  Disse
+      sættekasser bliver malet med en bestemt teknik, som giver en illusion af
+      ægte træ.  Det er op til dig, hvilke elementer, du ønsker, der skal indgå
+      i dit personlige maleri.  Kun fantasien sætter grænser.
+    </p>
+  </article>
+  <Card
+    header="Fugl på farten"
+    text="En flot sættekasse med brune og blå nuancer"
+    button="Tilføj til kurv"
+  >
+    <img src="" alt="" />
+  </Card>
+</MainLayout>
