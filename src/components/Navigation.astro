@@ -30,13 +30,18 @@ import "../styles/style.css";
   /* Mobile menu styling */
 
   nav{
-    position: fixed;
-    top: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+  .navigation.scrolled {
+  position: fixed;
+  top: 0;
    left: 0;
    width: 100%;
    z-index: 9999;
    background-color: white;
-  }
+ 
+}
 .menu {
         display: none;
         left: 0;
@@ -194,13 +199,17 @@ import "../styles/style.css";
   });
 /* fixes position */
 window.addEventListener('scroll', function() {
-  var nav = document.querySelector('.navigation');
-  if (window.scrollY > 0) {
-    nav.classList.add('scrolled');
+  var navigation = document.querySelector('.navigation');
+  var scrollPosition = window.scrollY;
+  var headerHeight = document.querySelector('header').offsetHeight; // Højden af header-elementet
+
+  if (scrollPosition > headerHeight) {
+    navigation.classList.add('scrolled');
   } else {
-    nav.classList.remove('scrolled');
+    navigation.classList.remove('scrolled');
   }
 });
+
 
 </script>
 
