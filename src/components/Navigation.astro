@@ -3,12 +3,13 @@ import "../styles/style.css";
 ---
 <header>
   <nav>
+    <div class="big-wrapper">
     <div class="menu-wrapper">
-      <button class="burger-menu">
+      <div class="burger-menu">
         <span></span>
         <span></span>
         <span></span>
-      </button>
+    </div>
       <div class="logo">
         <a href="/index">TANJA<br>KALEOVSKI</a>
       </div>
@@ -19,13 +20,83 @@ import "../styles/style.css";
       <li><a href="/ommig">OM MIG</a></li>
       <li><a href="/kontakt">KONTAKT</a></li>
     </ul>
+  </div>
   </nav>
 </header>
 
 <style>
   /* Mobile menu styling */
 
-  .menu-wrapper {
+
+
+/*  .menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding: 20px;
+  background-color: #ffffff;
+} */
+
+.menu {
+        display: none;
+        left: 0;
+        z-index: 1;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+.menu.active {
+  display: block;
+}
+
+  .menu li {
+    margin: 20px 0;
+    list-style-type: none;
+  }
+
+  li a {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .burger-menu {
+  display: block;
+  position: relative;
+  width: 30px; /* Adjust the width as needed */
+  height: 4px; /* Adjust the height as needed */
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.burger-menu span{
+ position: absolute;
+  width: 100%; /* Adjust the width as needed */
+  height: 4px; /* Adjust the height as needed */
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.burger-menu span:nth-child(1) {
+  top: 0;
+}
+
+.burger-menu span:nth-child(2) {
+  top: 10px;
+}
+
+.burger-menu span:nth-child(3) {
+  top: 20px;
+}
+
+
+.menu-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,43 +110,17 @@ import "../styles/style.css";
     font-size: 30px;
   }
 
-  .menu {
-    display: none;
-    left: 0;
-    z-index: 1;
-    margin-top: 10px;
-    text-align: center;
-  }
 
-  .menu.active {
-    display: block;
-  }
-
-  .menu li {
-    margin: 20px 0;
-    list-style-type: none;
-  }
-
-  li a {
-    font-family: aviano-sans, sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: black;
-  }
-
-  .burger-menu span{
-   
-    display: block;
-      width: 100%;
-      height: 4px;
-      background-color: rgb(0, 0, 0);
-      transition: all 0.3s ease-in-out;
-  }
 
   /* Desktop menu styling */
   @media screen and (min-width: 800px) {
+
+    .big-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
     .menu {
       display: flex;
       justify-content: flex-end;
@@ -105,8 +150,7 @@ import "../styles/style.css";
     }
   }
 </style>
-
-<script>
+ <script>
   const burgerMenu = document.querySelector('.burger-menu');
   const menu = document.querySelector('.menu');
   const menuItems = document.querySelectorAll('.menu li');
