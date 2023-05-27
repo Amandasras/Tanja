@@ -29,6 +29,14 @@ import "../styles/style.css";
 <style>
   /* Mobile menu styling */
 
+  nav{
+    position: fixed;
+    top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 9999;
+   background-color: white;
+  }
 .menu {
         display: none;
         left: 0;
@@ -59,7 +67,6 @@ import "../styles/style.css";
   position: relative;
   width: 30px; /* Adjust the width as needed */
   height: 4px; /* Adjust the height as needed */
-  background-color: black;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -161,6 +168,8 @@ import "../styles/style.css";
   }
 </style>
  <script>
+
+  /* bugermenuen */
   const burgerMenu = document.querySelector('.burger-menu');
   const menu = document.querySelector('.menu');
   const menuItems = document.querySelectorAll('.menu li');
@@ -183,6 +192,16 @@ import "../styles/style.css";
       menu.classList.remove('active');
     }
   });
+/* fixes position */
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('.navigation');
+  if (window.scrollY > 0) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
 </script>
 
 
