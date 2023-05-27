@@ -13,6 +13,7 @@ import "../styles/style.css";
       <div class="logo">
         <a href="/index">TANJA<br>KALEOVSKI</a>
       </div>
+      <img class="shoppingBaglille" src="../billeder/shoppingBag.webp" alt="">
     </div>
     <ul class="menu">
       <li><a href="/kurser">KURSER</a></li>
@@ -20,24 +21,13 @@ import "../styles/style.css";
       <li><a href="/ommig">OM MIG</a></li>
       <li><a href="/kontakt">KONTAKT</a></li>
     </ul>
+    <img class="shoppingBag" src="../billeder/shoppingBag.webp" alt="">
   </div>
   </nav>
 </header>
 
 <style>
   /* Mobile menu styling */
-
-
-
-/*  .menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  display: none;
-  padding: 20px;
-  background-color: #ffffff;
-} */
 
 .menu {
         display: none;
@@ -100,17 +90,29 @@ import "../styles/style.css";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
   }
 
   .logo a{
     text-decoration: none;
     color: black;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 30px;¨
+  
   }
 
+  img{
+    order:3;
+    width: 30px;
+  }
 
+  @media screen and (max-width:800px){
+    .shoppingBag{
+    display: none;
+  }
+
+  }
+  
 
   /* Desktop menu styling */
   @media screen and (min-width: 800px) {
@@ -119,7 +121,7 @@ import "../styles/style.css";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    
   }
     .menu {
       display: flex;
@@ -135,8 +137,12 @@ import "../styles/style.css";
     .menu li {
       margin: 0 20px;
       list-style-type: none;
+      
     }
 
+    .menu li :hover{
+      text-decoration: underline;
+    }
     .logo {
       order: 1;
     }
@@ -144,6 +150,10 @@ import "../styles/style.css";
     .menu {
       order: 2;
     }
+
+  .shoppingBaglille{
+    display: none;
+  }
 
     .burger-menu {
       display: none;
