@@ -22,7 +22,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     4600 Køge</p>
 
 <section class="overflader">
-<div class="kurser_blop"></div>
+<div class="kurser_blop"> <img src="../temaBilleder/overflader.webp" alt=""></div>
 <div class="overflader_tekst">
     <h2> IMITATION AF OVERFLADER</h2>
     <p>15% rabat gælder kun kommende studerende på kunstuddannelser</p>
@@ -67,7 +67,7 @@ h1{
     font-size: 1.5rem;
 }
 .section_top {
-  width: 100vw;
+  width: 97vw;
   height: 50vw;
   overflow: hidden;
   background-image: url("../temaBilleder/kursus1.webp");
@@ -94,24 +94,16 @@ h1{
 }
 /* ------------ */
 
-.kurser_blop {
-    background-image: url("../temaBilleder/lilleOverflader.webp");
-    aspect-ratio: 1/1;
-    background-repeat: no-repeat;
-    /* Tilpas eventuelt baggrundsbilledets egenskaber, f.eks. størrelse og gentagelse */
-  }
 
+.overflader{
+    background-color: #EEE7DF;
+    padding: 1em 0 0 3em;
+}
 
 img{
     max-width: 100%;
 }
 
-@media screen and (min-width:900px){
-    .kurser_blop {
-    background-image: url("../temaBilleder/overflader.webp");
-    /* Tilpas eventuelt baggrundsbilledets egenskaber, f.eks. størrelse og gentagelse */
-  }
-}
 @media screen and (min-width:700px){
 h1{ 
 font-size: 2.5rem;
@@ -119,6 +111,8 @@ font-size: 2.5rem;
 p{
     font-size: 1.5rem;   
 }
+
+
 
 }
 
