@@ -12,7 +12,7 @@
 /* Til at sætte tekst ind på baggrundsbilledet, men i tvivl om hvordan det gør med navigationen */
 
 .blaFugl img {
-  min-width: 100%;
+  max-width: 100vw;
   margin-bottom: 2rem;
 }
 
@@ -106,3 +106,101 @@ p {
 }
 
 /* Ved desktop version skal der order på for at billederne kommer i den rigtige rækkefølge */
+@media screen and(min-width:800px) {
+  .passionstekst {
+    display: flex;
+  }
+  .passionstekst p,
+  i {
+    justify-content: center;
+    margin: 1rem 0 1rem 3rem;
+    max-width: 22em;
+  }
+
+  .kategorier {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .kategorier img {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  /* ------------------------------------------------------------------------------ */
+
+  /*------------------------------- Kategorier -------------------------------------*/
+
+  /* lav grid til kategorier og brug gridarea når der skal sættes tekst på billeder! */
+
+  .shopAlt {
+    display: grid;
+  }
+  .shopAlt > img,
+  a {
+    grid-area: 1/1;
+  }
+  .shopAlt > a {
+    margin: 85% 0 0 23%;
+  }
+
+  .tilmeldKurser {
+    margin: 4rem;
+  }
+
+  .tilmeldKurser h3,
+  p {
+    text-align: center;
+    margin: 1rem;
+  }
+  .tilmeldKurser > a {
+    margin: 90% 0 0 20%;
+  }
+
+  .shopSaettekasser {
+    display: grid;
+  }
+  .shopSaettekasser > img,
+  a {
+    grid-area: 1/1;
+  }
+  .shopSaettekasser > a {
+    margin: 100% 0 0 45%;
+  }
+
+  .shopPortraetter {
+    margin: 4rem;
+  }
+
+  .shopPortraetter h3,
+  p {
+    text-align: center;
+    margin: 1rem;
+  }
+  .shopPortraetter > a {
+    margin: 90% 0 0 20%;
+  }
+
+  .shopUnika {
+    display: grid;
+  }
+  .shopUnika > img,
+  a {
+    grid-area: 1/1;
+  }
+  .shopUnika > a {
+    margin: 85% 0 0 51%;
+  }
+
+  .shopKunsttryk {
+    margin: 4rem;
+  }
+
+  .shopKunsttryk h3,
+  p {
+    text-align: center;
+    margin: 1rem;
+  }
+  .shopKunsttryk > a {
+    margin: 90% 0 0 20%;
+  }
+}
