@@ -5,12 +5,6 @@ const { variant, size } = Astro.props;
 <button class={variant + " " + size}><slot /></button>
 
 <style>
-  /* button {
-    padding: 1rem;
-    border-radius: 1rem;
-    width: 25%;
-    height: 50px;
-  } */
   .primary {
     border: 1.5px solid white;
     color: white;
@@ -58,6 +52,6 @@ const { variant, size } = Astro.props;
   // Tilføj en eventlytter til knappen
   button.addEventListener("click", function () {
     // Før brugeren videre til en anden side
-    window.location.href = "/product"; // Erstat med din ønskede URL
+    window.location.href = "../pages/produkter"; // Erstat med din ønskede URL
   });
 </script>

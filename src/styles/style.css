@@ -120,18 +120,17 @@ p {
     font-style: italic;
   }
 
+  /* ------------------------------------------------------------------------------ */
+
+  /*------------------------------- Kategorier -------------------------------------*/
   .kategorier {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    overflow: hidden;
   }
   .kategorier img {
     width: 100%;
   }
-
-  /* ------------------------------------------------------------------------------ */
-
-  /*------------------------------- Kategorier -------------------------------------*/
-
   /* Rækkefølge på kategorierne */
   .kategorier :nth-child(1) {
     order: 1;
@@ -151,23 +150,28 @@ p {
   .kategorier :nth-child(6) {
     order: 6;
   }
+  /* --------------------------- */
 
   .shopAlt {
     display: grid;
   }
   .shopAlt > img {
-    width: 80%;
+    width: 90%;
   }
   .shopAlt > img,
-  a {
+  Button {
     grid-area: 1/1;
   }
-  .shopAlt > a {
-    margin: 85% 0 0 23%;
+  .shopAlt > Button {
+    margin: 75% 0 0 10%;
+    padding: 3rem;
   }
 
   .tilmeldKurser {
     margin: 4rem;
+  }
+  .tilmeldKurser > img {
+    width: 80%;
   }
 
   .tilmeldKurser h3,
@@ -183,7 +187,6 @@ p {
     display: grid;
   }
   .shopSaettekasser > img {
-    width: 80%;
   }
   .shopSaettekasser > img,
   a {
