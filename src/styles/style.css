@@ -40,7 +40,7 @@ a {
   grid-area: 1/1;
 }
 .shopAlt > a {
-  margin: 85% 0 0 23%;
+  margin: 83% 0 0 21%;
 }
 
 .tilmeldKurser {
@@ -64,7 +64,7 @@ a {
   grid-area: 1/1;
 }
 .shopSaettekasser > a {
-  margin: 100% 0 0 45%;
+  margin: 95% 0 0 45%;
 }
 
 .shopPortraetter {
@@ -159,12 +159,11 @@ p {
     width: 90%;
   }
   .shopAlt > img,
-  Button {
+  a {
     grid-area: 1/1;
   }
-  .shopAlt > Button {
+  .shopAlt > a {
     margin: 75% 0 0 10%;
-    padding: 3rem;
   }
 
   .tilmeldKurser {
@@ -174,6 +173,10 @@ p {
     width: 80%;
   }
 
+  .TK {
+    justify-items: center;
+    max-width: 65vw;
+  }
   .tilmeldKurser h3,
   p {
     text-align: center;
@@ -186,8 +189,7 @@ p {
   .shopSaettekasser {
     display: grid;
   }
-  .shopSaettekasser > img {
-  }
+
   .shopSaettekasser > img,
   a {
     grid-area: 1/1;
