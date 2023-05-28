@@ -156,7 +156,6 @@ p {
     display: grid;
   }
   .shopAlt > img {
-    width: 80%;
   }
   .shopAlt > img,
   a {
@@ -183,7 +182,6 @@ p {
     display: grid;
   }
   .shopSaettekasser > img {
-    width: 80%;
   }
   .shopSaettekasser > img,
   a {
