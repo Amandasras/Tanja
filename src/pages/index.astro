@@ -34,7 +34,11 @@ import MainLayout from "../layouts/MainLayout.astro";
   <section class="kategorier">
     <article class="shopAlt">
       <img src="../billeder/shopAlt.webp" alt="Shop Alt" />
-      <Button id="shopAlt" variant="primary" size="small">SHOP ALT</Button>
+      <a href="/produkter"
+        ><Button id="shopAlt" variant="primary" size="small">
+          SHOP ALT
+        </Button></a
+      >
     </article>
     <article class="tilmeldKurser">
       <img src="../billeder/kursus.png" alt="Kurser" />
@@ -44,11 +48,13 @@ import MainLayout from "../layouts/MainLayout.astro";
         henvender sig til alle, der kræves ingen forkundskaber.  Jeg underviser
         i følgende - imitation af træ, overflader og marmor.
       </p>
-      <!-- find video om buttons som component -->
+      <a href=""><Button variant="secondary" size="large">Læs mere</Button></a>
     </article>
     <article class="shopSaettekasser">
       <img src="../billeder/shopKasser.webp" alt="Sættekasser" />
-      <Button variant="primary" size="large">SHOP SÆTTEKASSER</Button>
+      <a href=""
+        ><Button variant="primary" size="large">SHOP SÆTTEKASSER</Button></a
+      >
     </article>
 
     <article class="shopPortraetter">
@@ -59,11 +65,12 @@ import MainLayout from "../layouts/MainLayout.astro";
         ikke være en kopi af billedet.Det skal være unikt, personligt og med
         lidt kant, men selvfølgelig skal det ligne.
       </p>
+      <a href=""><Button variant="secondary" size="large">Shop nu</Button></a>
     </article>
 
     <article class="shopUnika">
       <img src="../billeder/shopUnika.webp" alt="Unika" />
-      <Button variant="primary" size="medium">SHOP UNIKA</Button>
+      <a href=""><Button variant="primary" size="medium">SHOP UNIKA</Button></a>
     </article>
     <article class="shopKunsttryk">
       <img src="../billeder/shopTryk.webp" alt="Kunsttryk" />
@@ -73,6 +80,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         akvarelpapir. Det produceres med vandbaseret blæk i mindst 9-trykfarver,
         og miljøvenligt.
       </p>
+      <a href=""><Button variant="secondary" size="large">Shop nu</Button></a>
     </article>
   </section>
 </MainLayout>
