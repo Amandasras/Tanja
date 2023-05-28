@@ -5,11 +5,21 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
     <section class="slideshow">
+        <div class="tekst">
+            <h1>KREATIVE KUNSTKURSER</h1>
+            <p>Kom og lær at male realistiske overflader <br>
+                Der er flere  former kurser 
+                </p>
+        </div>
+       
 <div class="section_top"> </div>
-<h1>KREATIVE KUNSTKURSER</h1>
-<p>Kom og lær at male realistiske overflader <br>
-    Der er flere  former kurser 
-    </p>
+
+</section>
+
+<section>
+<img src="" alt="">
+<div></div>
+
 </section>
 
 
@@ -21,6 +31,42 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 .slideshow{
     display: grid;
+   
+}
+
+.section_top, .tekst{
+    grid-area: 1/1;
+}
+
+.tekst{
+    text-align: center;
+    color: white;
+    z-index: 2;
+   place-self: center;
+   
+}
+
+h1{
+    font-size: 1.7rem;
+}
+
+
+@media screen and (min-width:800px){
+h1{ 
+font-size: 2.5rem;
+
+}
+p{
+    font-size: 1.5rem;
+    
+}
+}
+
+@media screen and (min-width:1000px){
+h1{ 
+font-size: 3rem;
+
+}
 }
 
 .section_top {
@@ -32,7 +78,8 @@ import MainLayout from "../layouts/MainLayout.astro";
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: change 20s infinite ;
+  animation: change 15s infinite ;
+  z-index: 1;
 }
 @keyframes change {
   0% {
@@ -43,6 +90,9 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
   66% {
     background-image: url(../temaBilleder/kurser3.webp);
+  }
+  100% { /* Tilføjet 100% nøglepunkt */
+    background-image: url(../temaBilleder/kursus1.webp); /* Vender tilbage til det første billede for at forhindre overlap */
   }
 }
 
