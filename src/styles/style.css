@@ -16,11 +16,12 @@
   margin-bottom: 2rem;
 }
 
-.passionstekst p,
-i {
+.passionstekst p {
   text-align: center;
-  margin: 1rem 0 1rem 3rem;
-  max-width: 22em;
+  margin: 1rem 3rem 2rem 3rem;
+}
+.italic {
+  font-style: italic;
 }
 /* ------------------------------------------------------------------------------ */
 
@@ -28,14 +29,12 @@ i {
 
 .kategorier img {
   width: 100%;
-  margin-top: 2rem;
 }
-
-/* lav grid til kategorier og brug gridarea når der skal sættes tekst på billeder! */
 
 .shopAlt {
   display: grid;
 }
+
 .shopAlt > img,
 a {
   grid-area: 1/1;
@@ -106,15 +105,19 @@ p {
 }
 
 /* Ved desktop version skal der order på for at billederne kommer i den rigtige rækkefølge */
-@media screen and(min-width:800px) {
+@media screen and (min-width: 800px) {
   .passionstekst {
     display: flex;
-  }
-  .passionstekst p,
-  i {
     justify-content: center;
-    margin: 1rem 0 1rem 3rem;
-    max-width: 22em;
+    align-items: center;
+  }
+
+  .passionstekst div {
+    max-width: 65vw;
+  }
+
+  .italic {
+    font-style: italic;
   }
 
   .kategorier {
@@ -123,17 +126,37 @@ p {
   }
   .kategorier img {
     width: 100%;
-    margin-top: 2rem;
   }
 
   /* ------------------------------------------------------------------------------ */
 
   /*------------------------------- Kategorier -------------------------------------*/
 
-  /* lav grid til kategorier og brug gridarea når der skal sættes tekst på billeder! */
+  /* Rækkefølge på kategorierne */
+  .kategorier :nth-child(1) {
+    order: 1;
+  }
+  .kategorier :nth-child(2) {
+    order: 2;
+  }
+  .kategorier :nth-child(3) {
+    order: 4;
+  }
+  .kategorier :nth-child(4) {
+    order: 3;
+  }
+  .kategorier :nth-child(5) {
+    order: 5;
+  }
+  .kategorier :nth-child(6) {
+    order: 6;
+  }
 
   .shopAlt {
     display: grid;
+  }
+  .shopAlt > img {
+    width: 80%;
   }
   .shopAlt > img,
   a {
@@ -158,6 +181,9 @@ p {
 
   .shopSaettekasser {
     display: grid;
+  }
+  .shopSaettekasser > img {
+    width: 80%;
   }
   .shopSaettekasser > img,
   a {
