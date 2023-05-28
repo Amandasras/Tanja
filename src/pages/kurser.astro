@@ -4,13 +4,46 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-<section>
-    <img src="kursus1MedTekst.webp" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
+    <section class="slideshow">
+<div class="section_top"> </div>
+<h1>KREATIVE KUNSTKURSER</h1>
+<p>Kom og lær at male realistiske overflader <br>
+    Der er flere  former kurser 
+    </p>
 </section>
 
 
 
 
 </MainLayout>
+
+<style>
+
+.slideshow{
+    display: grid;
+}
+
+.section_top {
+  width: 100vw;
+  height: 50vw;
+  overflow: hidden;
+  background-image: url("../temaBilleder/kursus1.webp");
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: change 20s infinite ;
+}
+@keyframes change {
+  0% {
+    background-image: url(../temaBilleder/kursus1.webp);
+  }
+  33% {
+    background-image: url(../temaBilleder/kursus2.webp);
+  }
+  66% {
+    background-image: url(../temaBilleder/kurser3.webp);
+  }
+}
+
+</style>
