@@ -11,13 +11,6 @@
 
 /* Til at sætte tekst ind på baggrundsbilledet, men i tvivl om hvordan det gør med navigationen */
 
-.splash {
-  display: grid;
-}
-.splash > img,
-Navigation {
-  grid-area: 1/1;
-}
 .blaFugl img {
   min-width: 100%;
   margin-bottom: 2rem;
@@ -26,7 +19,7 @@ Navigation {
 .passionstekst p,
 i {
   text-align: center;
-  /* margin: 1rem 0 1rem 3rem; */
+  margin: 1rem 0 1rem 3rem;
   max-width: 22em;
 }
 /* ------------------------------------------------------------------------------ */
@@ -44,10 +37,10 @@ i {
   display: grid;
 }
 .shopAlt > img,
-Button {
+a {
   grid-area: 1/1;
 }
-.shopAlt > Button {
+.shopAlt > a {
   margin: 85% 0 0 23%;
 }
 
@@ -60,18 +53,19 @@ p {
   text-align: center;
   margin: 1rem;
 }
+.tilmeldKurser > a {
+  margin: 90% 0 0 20%;
+}
 
 .shopSaettekasser {
   display: grid;
 }
 .shopSaettekasser > img,
-Button {
+a {
   grid-area: 1/1;
 }
-.shopSaettekasser > Button {
+.shopSaettekasser > a {
   margin: 100% 0 0 45%;
-  color: white;
-  /* font-family: ; */
 }
 
 .shopPortraetter {
@@ -83,18 +77,19 @@ p {
   text-align: center;
   margin: 1rem;
 }
+.shopPortraetter > a {
+  margin: 90% 0 0 20%;
+}
 
 .shopUnika {
   display: grid;
 }
 .shopUnika > img,
-Button {
+a {
   grid-area: 1/1;
 }
-.shopUnika > Button {
+.shopUnika > a {
   margin: 85% 0 0 51%;
-  color: white;
-  /* font-family: ; */
 }
 
 .shopKunsttryk {
@@ -105,6 +100,9 @@ Button {
 p {
   text-align: center;
   margin: 1rem;
+}
+.shopKunsttryk > a {
+  margin: 90% 0 0 20%;
 }
 
 /* Ved desktop version skal der order på for at billederne kommer i den rigtige rækkefølge */
