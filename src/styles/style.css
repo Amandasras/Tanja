@@ -163,43 +163,46 @@ p {
     grid-area: 1/1;
   }
   .shopAlt > a {
-    margin: 75% 0 0 10%;
+    margin: 75% 0 0 0%;
   }
 
   .tilmeldKurser {
-    margin: 4rem;
+    margin: 0;
   }
   .tilmeldKurser > img {
-    width: 80%;
+    width: 70%;
   }
 
-  .TK {
-    justify-items: center;
-    max-width: 65vw;
-  }
   .tilmeldKurser h3,
   p {
     text-align: center;
-    margin: 1rem;
+    max-width: 65vw;
   }
   .tilmeldKurser > a {
-    margin: 90% 0 0 20%;
+    margin: 90% 0 0 0;
   }
 
   .shopSaettekasser {
     display: grid;
   }
-
+  .shopSaettekasser img {
+    width: 80%;
+    margin-left: 3rem;
+  }
   .shopSaettekasser > img,
   a {
     grid-area: 1/1;
   }
   .shopSaettekasser > a {
-    margin: 100% 0 0 45%;
+    margin: 75% 0 0 10%;
   }
 
   .shopPortraetter {
     margin: 4rem;
+  }
+  .shopPortraetter img {
+    width: 70%;
+    margin-left: 7rem;
   }
 
   .shopPortraetter h3,
@@ -208,12 +211,17 @@ p {
     margin: 1rem;
   }
   .shopPortraetter > a {
-    margin: 90% 0 0 20%;
+    margin: 90% 0 0 0;
   }
 
   .shopUnika {
     display: grid;
   }
+
+  .shopUnika img {
+    width: 80%;
+  }
+
   .shopUnika > img,
   a {
     grid-area: 1/1;
@@ -222,14 +230,13 @@ p {
     margin: 85% 0 0 51%;
   }
 
-  .shopKunsttryk {
-    margin: 4rem;
+  .shopKunsttryk img {
+    width: 60%;
   }
 
   .shopKunsttryk h3,
   p {
     text-align: center;
-    margin: 1rem;
   }
   .shopKunsttryk > a {
     margin: 90% 0 0 20%;
