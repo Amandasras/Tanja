@@ -12,13 +12,31 @@ import MainLayout from "../layouts/MainLayout.astro";
                 </p>
         </div>
        
-<div class="section_top"> </div>
+        <div class="section_top"> </div>
+     </section>
 
-</section>
+<p>Alle kurser foregår i Kreativt Fitnesscenter ApS
+<br>
+    Galoche Allé 8, 1. th
+<br>
+    4600 Køge</p>
 
-<section>
-<img src="overflader" alt="">
-<div></div>
+<section class="overflader">
+<div class="kurser_blop"></div>
+<div class="overflader_tekst">
+    <h2> IMITATION AF OVERFLADER</h2>
+    <p>15% rabat gælder kun kommende studerende på kunstuddannelser</p>
+    <h3>D. 26-27 JUNI 2023</h3>
+    <p>Overflader er jo en grundlæggende illusionistisk teknik, hvor iagttageren ´bedrages´ og tror at det malede objekt er virkeligt. Til illusion af overflader bruges overvejende glasurteknik med en varieret og kreativ brug af forskelligt værktøj, udstyr og hjælpemidler. 
+        Ved at anvende glasurteknik, behøver man ikke lade sine kreative evner gå ud over byggematerialernes fysiske kompleksiteter, men man kan tværtimod udføre en overflade med enkle teknikker. 
+        
+        Prisen er inklusiv materialer, kompendium og selvfølgelig te/kaffe og kage.
+        Tilmelding er gyldig ved betaling, og kan fortrydes indtil en måned før kursusstart.
+        
+        Pris: 500 pr. time
+        3000,- dagspris (7,5 time).
+        </p>
+</div>
 
 </section>
 
@@ -28,7 +46,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
 <style>
-
+/* Slideshow */
 .slideshow{
     display: grid;
    
@@ -42,33 +60,12 @@ import MainLayout from "../layouts/MainLayout.astro";
     text-align: center;
     color: white;
     z-index: 2;
-   place-self: center;
-   
+   place-self: center;  
 }
 
 h1{
-    font-size: 1.7rem;
-}
-
-
-@media screen and (min-width:800px){
-h1{ 
-font-size: 2.5rem;
-
-}
-p{
     font-size: 1.5rem;
-    
 }
-}
-
-@media screen and (min-width:1000px){
-h1{ 
-font-size: 3rem;
-
-}
-}
-
 .section_top {
   width: 100vw;
   height: 50vw;
@@ -91,9 +88,38 @@ font-size: 3rem;
   66% {
     background-image: url(../temaBilleder/kurser3.webp);
   }
-  100% { /* Tilføjet 100% nøglepunkt */
-    background-image: url(../temaBilleder/kursus1.webp); /* Vender tilbage til det første billede for at forhindre overlap */
+  100% {
+    background-image: url(../temaBilleder/kursus1.webp); 
   }
+}
+/* ------------ */
+
+.kurser_blop {
+    background-image: url('../temaBilleder/overflader.webp');
+    /* Tilpas eventuelt baggrundsbilledets egenskaber, f.eks. størrelse og gentagelse */
+  }
+
+
+img{
+    max-width: 100%;
+}
+@media screen and (min-width:700px){
+h1{ 
+font-size: 2.5rem;
+}
+p{
+    font-size: 1.5rem;   
+}
+.kurser_blop {
+    background-image: url('../temaBilleder/overflader.webp');
+    /* Tilpas eventuelt baggrundsbilledets egenskaber, f.eks. størrelse og gentagelse */
+  }
+}
+
+@media screen and (min-width:1000px){
+h1{ 
+font-size: 3rem;
+}
 }
 
 </style>
