@@ -95,13 +95,22 @@ h1{
 /* ------------ */
 
 .kurser_blop {
-    background-image: url('../temaBilleder/overflader.webp');
+    background-image: url("../temaBilleder/lilleOverflader.webp");
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
     /* Tilpas eventuelt baggrundsbilledets egenskaber, f.eks. størrelse og gentagelse */
   }
 
 
 img{
     max-width: 100%;
+}
+
+@media screen and (min-width:900px){
+    .kurser_blop {
+    background-image: url("../temaBilleder/overflader.webp");
+    /* Tilpas eventuelt baggrundsbilledets egenskaber, f.eks. størrelse og gentagelse */
+  }
 }
 @media screen and (min-width:700px){
 h1{ 
@@ -110,10 +119,7 @@ font-size: 2.5rem;
 p{
     font-size: 1.5rem;   
 }
-.kurser_blop {
-    background-image: url('../temaBilleder/overflader.webp');
-    /* Tilpas eventuelt baggrundsbilledets egenskaber, f.eks. størrelse og gentagelse */
-  }
+
 }
 
 @media screen and (min-width:1000px){
