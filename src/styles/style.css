@@ -227,18 +227,25 @@ p {
     grid-area: 1/1;
   }
   .shopUnika > a {
-    margin: 85% 0 0 51%;
+    margin: 65% 0 0 30%;
+  }
+
+  .shopKunsttryk {
+    margin: 0;
   }
 
   .shopKunsttryk img {
     width: 60%;
+    margin: 3rem 0 0 5rem;
   }
 
   .shopKunsttryk h3,
   p {
     text-align: center;
+    margin: 1rem 0 0 0;
+    max-width: 40vw;
   }
   .shopKunsttryk > a {
-    margin: 90% 0 0 20%;
+    margin: 90% 0 0 0;
   }
 }
