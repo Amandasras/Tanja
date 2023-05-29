@@ -14,12 +14,14 @@ import MainLayout from "../layouts/MainLayout.astro";
        
         <div class="section_top"> </div>
      </section>
+<div class="adresse">
+    <p>Alle kurser foregår i Kreativt Fitnesscenter ApS
+        <br>
+            Galoche Allé 8, 1. th
+        <br>
+            4600 Køge</p>
+</div>
 
-<p>Alle kurser foregår i Kreativt Fitnesscenter ApS
-<br>
-    Galoche Allé 8, 1. th
-<br>
-    4600 Køge</p>
 
 <section class="overflader">
 <div class="kurser_blop"> <img src="../temaBilleder/overflader.webp" alt=""></div>
@@ -27,7 +29,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     <h2> IMITATION AF OVERFLADER</h2>
     <p>15% rabat gælder kun kommende studerende på kunstuddannelser</p>
     <h3>D. 26-27 JUNI 2023</h3>
-    <p>Overflader er jo en grundlæggende illusionistisk teknik, hvor iagttageren ´bedrages´ og tror at det malede objekt er virkeligt. Til illusion af overflader bruges overvejende glasurteknik med en varieret og kreativ brug af forskelligt værktøj, udstyr og hjælpemidler. 
+    <p class="beskrivelse">Overflader er jo en grundlæggende illusionistisk teknik, hvor iagttageren ´bedrages´ og tror at det malede objekt er virkeligt. Til illusion af overflader bruges overvejende glasurteknik med en varieret og kreativ brug af forskelligt værktøj, udstyr og hjælpemidler. 
         Ved at anvende glasurteknik, behøver man ikke lade sine kreative evner gå ud over byggematerialernes fysiske kompleksiteter, men man kan tværtimod udføre en overflade med enkle teknikker. 
         
         Prisen er inklusiv materialer, kompendium og selvfølgelig te/kaffe og kage.
@@ -67,15 +69,14 @@ h1{
     font-size: 1.5rem;
 }
 .section_top {
-  width: 97vw;
-  height: 50vw;
+ aspect-ratio: 1512/800;
   overflow: hidden;
   background-image: url("../temaBilleder/kursus1.webp");
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: change 15s infinite ;
+  animation: change 15s infinite ease-in-out;
   z-index: 1;
 }
 @keyframes change {
@@ -94,6 +95,18 @@ h1{
 }
 /* ------------ */
 
+.overflader_tekst{
+    text-align: left;
+}
+.beskrivelse{
+    line-height: 151.4%;
+}
+.adresse{
+   display: flex;
+   justify-content: center;
+   text-align:center ;
+   padding-bottom: 1em;
+}
 
 .overflader{
     background-color: #EEE7DF;
@@ -105,7 +118,7 @@ img{
 }
 
 @media screen and (min-width:700px){
-h1{ 
+.shoph1{ 
 font-size: 2.5rem;
 }
 p{
