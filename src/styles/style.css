@@ -64,7 +64,7 @@ a {
   grid-area: 1/1;
 }
 .shopSaettekasser > a {
-  margin: 95% 0 0 45%;
+  margin: 95% 0 0 40.5%;
 }
 
 .shopPortraetter {
@@ -178,19 +178,19 @@ a {
     display: grid;
   }
   .shopSaettekasser img {
-    width: 80%;
-    margin-left: 3rem;
+    width: 90%;
+    margin-left: 4.5rem;
   }
   .shopSaettekasser > img,
   a {
     grid-area: 1/1;
   }
   .shopSaettekasser > a {
-    margin: 75% 0 0 10%;
+    margin: 85% 0 0 53%;
   }
 
   .shopPortraetter {
-    margin: 4rem;
+    margin: 5rem 4rem 4rem 4rem;
   }
   .shopPortraetter img {
     width: 70%;
@@ -198,7 +198,7 @@ a {
   }
 
   .shopPortraetter > a {
-    margin: 90% 0 0 0;
+    margin: 90% 0 0 32%;
   }
 
   .shopUnika {
