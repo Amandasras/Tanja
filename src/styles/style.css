@@ -40,7 +40,7 @@ a {
   grid-area: 1/1;
 }
 .shopAlt > a {
-  margin: 83% 0 0 21%;
+  margin: 80% 0 0 13%;
 }
 
 .tilmeldKurser {
@@ -88,7 +88,7 @@ a {
   grid-area: 1/1;
 }
 .shopUnika > a {
-  margin: 85% 0 0 51%;
+  margin: 77% 0 0 45%;
 }
 
 .shopKunsttryk {
@@ -156,14 +156,14 @@ p {
     display: grid;
   }
   .shopAlt > img {
-    width: 90%;
+    width: 95%;
   }
   .shopAlt > img,
   a {
     grid-area: 1/1;
   }
   .shopAlt > a {
-    margin: 75% 0 0 0%;
+    margin: 75% 0 0 20%;
   }
 
   .tilmeldKurser {
@@ -171,10 +171,10 @@ p {
   }
   .tilmeldKurser > img {
     width: 70%;
+    margin: 2rem;
   }
 
-  .tilmeldKurser h3,
-  p {
+  .TK {
     text-align: center;
     max-width: 65vw;
   }
