@@ -1,4 +1,6 @@
 ---
+// Dette er singleview sitet.
+
 import MainLayout from "../../layouts/MainLayout.astro";
 export async function getStaticPaths() {
   const data = await fetch(
@@ -11,6 +13,7 @@ export async function getStaticPaths() {
       },
     }
   ).then((response) => response.json());
+  // Ovenstående gør at vi kan fetche vores data fra supabase og unlocke den med apikeyen.
 
   return data.map((produkt) => {
     return {
@@ -19,8 +22,11 @@ export async function getStaticPaths() {
     };
   });
 }
+// Dette gør at vi forbinde denne side med slug siden.
+
 const { myData } = Astro.props;
 console.log(myData);
+// Dette gør at vi kan bruge myData senere nede i singleviewet.
 ---
 
 <MainLayout title={myData.navn}>

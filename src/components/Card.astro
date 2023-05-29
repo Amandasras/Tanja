@@ -1,6 +1,5 @@
 ---
 const { data } = Astro.props;
-// const imgSrc = `../../public/produktbilleder${billede}`;
 ---
 
 <a href={`produkt/${data.slug}`}>
@@ -9,7 +8,6 @@ const { data } = Astro.props;
       src={`../../public/produktbilleder/Maleri/${data.billede}`}
       alt="billede"
     />
-
     <h2>{data.navn}</h2>
     <p>{data.størrelse}</p>
     <p>{data.kategori}</p>
@@ -17,4 +15,3 @@ const { data } = Astro.props;
 </a>
 
 <style></style>
-<!-- const imgsrc = `./produktbilleder/$(image)`: -->
