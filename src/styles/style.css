@@ -33,7 +33,7 @@
 .H3P {
   text-align: center;
   margin: 2rem;
-  max-width: 35vw;
+  max-width: 65vw;
 }
 
 .shopAlt {
@@ -141,7 +141,13 @@ a {
     order: 6;
   }
   /* --------------------------- */
-
+  /* Alle H3 og P har samme styling på blops */
+  .H3P {
+    text-align: center;
+    margin: 2rem;
+    max-width: 35vw;
+  }
+  /* ---------------------------- */
   .shopAlt {
     display: grid;
   }
@@ -157,19 +163,15 @@ a {
   }
 
   .tilmeldKurser {
-    margin: 0;
+    margin: 2rem 0 0 3rem;
   }
   .tilmeldKurser > img {
     width: 70%;
     margin: 2rem;
   }
 
-  .TK {
-    text-align: center;
-    max-width: 65vw;
-  }
   .tilmeldKurser > a {
-    margin: 90% 0 0 0;
+    margin: 90% 0 0 27%;
   }
 
   .shopSaettekasser {
@@ -195,11 +197,6 @@ a {
     margin-left: 7rem;
   }
 
-  .shopPortraetter h3,
-  p {
-    text-align: center;
-    margin: 1rem;
-  }
   .shopPortraetter > a {
     margin: 90% 0 0 0;
   }
@@ -229,12 +226,6 @@ a {
     margin: 3rem 0 0 5rem;
   }
 
-  .shopKunsttryk h3,
-  p {
-    text-align: center;
-    margin: 1rem 0 0 0;
-    max-width: 40vw;
-  }
   .shopKunsttryk > a {
     margin: 90% 0 0 0;
   }
