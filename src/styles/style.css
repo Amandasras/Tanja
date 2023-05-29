@@ -30,6 +30,11 @@
 .kategorier img {
   width: 100%;
 }
+.H3P {
+  text-align: center;
+  margin: 2rem;
+  max-width: 35vw;
+}
 
 .shopAlt {
   display: grid;
@@ -47,10 +52,6 @@ a {
   margin: 4rem;
 }
 
-.TK {
-  text-align: center;
-  margin: 1rem;
-}
 .tilmeldKurser > a {
   margin: 90% 0 0 20%;
 }
@@ -70,11 +71,6 @@ a {
   margin: 4rem;
 }
 
-.shopPortraetter h3,
-p {
-  text-align: center;
-  margin: 1rem;
-}
 .shopPortraetter > a {
   margin: 90% 0 0 20%;
 }
@@ -94,11 +90,6 @@ a {
   margin: 4rem;
 }
 
-.shopKunsttryk h3,
-p {
-  text-align: center;
-  margin: 1rem;
-}
 .shopKunsttryk > a {
   margin: 90% 0 0 20%;
 }
