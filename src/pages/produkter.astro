@@ -2,7 +2,18 @@
 import Card from "../components/Card.astro";
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
-const data = await fetch("").then((res) => res.json());
+const data = await fetch(
+  " https://pbwewzzxmajwtimxhwvi.supabase.co/rest/v1/produkter",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBid2V3enp4bWFqd3RpbXhod3ZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3NTEwMzcsImV4cCI6MjAwMDMyNzAzN30.7isrtEphCJrttMn8HetVh12NpQkUPkX7M-Zx4_eSryc",
+    },
+  }
+).then((res) => res.json());
+
+console.log(data);
 ---
 
 <MainLayout>
@@ -31,9 +42,3 @@ const data = await fetch("").then((res) => res.json());
     <img src="" alt="" />
   </Card>
 </MainLayout>
-
-
-curl 'https://pbwewzzxmajwtimxhwvi.supabase.co/rest/v1/produkter?select=id' \
--H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBid2V3enp4bWFqd3RpbXhod3ZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3NTEwMzcsImV4cCI6MjAwMDMyNzAzN30.7isrtEphCJrttMn8HetVh12NpQkUPkX7M-Zx4_eSryc" \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBid2V3enp4bWFqd3RpbXhod3ZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ3NTEwMzcsImV4cCI6MjAwMDMyNzAzN30.7isrtEphCJrttMn8HetVh12NpQkUPkX7M-Zx4_eSryc"
- 
