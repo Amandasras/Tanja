@@ -1,11 +1,15 @@
 ---
-const { header } = Astro.props;
+const { data } = Astro.props;
+console.log(data);
 ---
 
-<!-- Dette er et card til produkterne på produktsiden -->
-<article>
-  <h2>{header}</h2>
-  <slot />
-</article>
+<a href={`produkt/${data.slug}`}>
+  <article>
+    <img src={data.billede} alt="" />
+    <h2>{data.navn}</h2>
+    <p>{data.størrelse}</p>
+    <p>{data.kategori}</p>
+  </article>
+</a>
 
 <style></style>

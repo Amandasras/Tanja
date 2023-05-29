@@ -2,6 +2,7 @@
 import Card from "../components/Card.astro";
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
+
 const data = await fetch(
   " https://pbwewzzxmajwtimxhwvi.supabase.co/rest/v1/produkter",
   {
@@ -12,8 +13,6 @@ const data = await fetch(
     },
   }
 ).then((res) => res.json());
-
-console.log(data);
 ---
 
 <MainLayout>
@@ -34,11 +33,15 @@ console.log(data);
       i dit personlige maleri.  Kun fantasien sætter grænser.
     </p>
   </article>
-  <Card
-    header="Fugl på farten"
-    text="En flot sættekasse med brune og blå nuancer"
-    button="Tilføj til kurv"
-  >
-    <img src="" alt="" />
-  </Card>
+
+  <section class="produkt">
+    {
+      data.map((produkt) => {
+        return <Card data={produkt} />;
+      })
+    }
+  </section>
 </MainLayout>
+<!-- header="Fugl på farten" text="En flot sættekasse med brune og blå nuancer" button="Tilføj
+til kurv" >
+<img src="" alt="" /> -->
