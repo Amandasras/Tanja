@@ -214,7 +214,7 @@ a {
     grid-area: 1/1;
   }
   .shopUnika > a {
-    margin: 65% 0 0 30%;
+    margin: 65% 0 0 39.7%;
   }
 
   .shopKunsttryk {
@@ -222,11 +222,11 @@ a {
   }
 
   .shopKunsttryk img {
-    width: 60%;
-    margin: 3rem 0 0 5rem;
+    width: 55%;
+    margin: 4rem 0 0 5rem;
   }
 
   .shopKunsttryk > a {
-    margin: 90% 0 0 0;
+    margin: 90% 0 0 26%;
   }
 }
