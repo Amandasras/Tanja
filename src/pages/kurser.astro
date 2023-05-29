@@ -7,7 +7,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     <section class="slideshow">
         <div class="tekst">
             <h1>KREATIVE KUNSTKURSER</h1>
-            <p>Kom og lær at male realistiske overflader <br>
+            <p class="pIbillede">Kom og lær at male realistiske overflader <br>
                 Der er flere  former kurser 
                 </p>
         </div>
@@ -31,13 +31,13 @@ import MainLayout from "../layouts/MainLayout.astro";
     <h3>D. 26-27 JUNI 2023</h3>
     <p class="beskrivelse">Overflader er jo en grundlæggende illusionistisk teknik, hvor iagttageren ´bedrages´ og tror at det malede objekt er virkeligt. Til illusion af overflader bruges overvejende glasurteknik med en varieret og kreativ brug af forskelligt værktøj, udstyr og hjælpemidler. 
         Ved at anvende glasurteknik, behøver man ikke lade sine kreative evner gå ud over byggematerialernes fysiske kompleksiteter, men man kan tværtimod udføre en overflade med enkle teknikker. 
-        <br>
-        Prisen er inklusiv materialer, kompendium og selvfølgelig te/kaffe og kage.
-        Tilmelding er gyldig ved betaling, og kan fortrydes indtil en måned før kursusstart.
+    </p>
+    <p class="beskrivelse">      Prisen er inklusiv materialer, kompendium og selvfølgelig te/kaffe og kage.
+    Tilmelding er gyldig ved betaling, og kan fortrydes indtil en måned før kursusstart.
+    </p>
+      <p class="beskrivelse">  Pris: 500 pr. time
+        3000,- dagspris (7,5 time).</p>
         
-        Pris: 500 pr. time
-        3000,- dagspris (7,5 time).
-        </p>
 </div>
 
 </section>
@@ -94,13 +94,19 @@ h1{
   }
 }
 /* ------------ */
-
+¨
+.overflader{
+    display: grid;
+    padding: 3em;
+    grid-template-columns: 1fr;
+}
 .overflader_tekst{
-    text-align: left;
+
 }
 .beskrivelse{
-    line-height: 151.4%;
-    text-align: left;
+  line-height: 151.4%;
+  padding-top: 1em;
+  font-weight: 500;
 }
 .adresse{
    display: flex;
@@ -123,7 +129,7 @@ img{
 .shoph1{ 
 font-size: 2.5rem;
 }
-p{
+.pIbillede{
     font-size: 1.5rem;   
 }
 
@@ -134,6 +140,11 @@ p{
 @media screen and (min-width:1000px){
 h1{ 
 font-size: 3rem;
+}
+
+.overflader{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 }
 
