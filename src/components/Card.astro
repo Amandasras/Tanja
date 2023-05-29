@@ -2,8 +2,8 @@
 const { data } = Astro.props;
 ---
 
-<a href={`produkt/${data.slug}`}>
-  <article>
+<section>
+  <a href={`produkt/${data.slug}`}>
     <img
       src={`../../public/produktbilleder/Maleri/${data.billede}`}
       alt="billede"
@@ -11,7 +11,19 @@ const { data } = Astro.props;
     <h2>{data.navn}</h2>
     <p>{data.størrelse}</p>
     <p>{data.kategori}</p>
-  </article>
-</a>
+  </a>
+</section>
 
-<style></style>
+<style>
+  img {
+    max-width: 30%;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  a {
+    grid-area: none;
+  }
+</style>
