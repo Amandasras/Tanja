@@ -1,13 +1,13 @@
 ---
 const { data, billede } = Astro.props;
 const imgSrc = `../../public/produktbilleder${billede}`;
-imagepath+
 ---
 
 <a href={`produkt/${data.slug}`}>
   <article>
-    <imagepath src={`/produktbilleder/${data.billede}`} alt="billede" />
-    <img src=(../produktbillede)+{} alt="">
+    <imagepath src={`/produktbilleder/${data.billede}`} alt="billede"
+    ></imagepath>
+    <img src="(../produktbillede)+{}" alt="" />
     <h2>{data.navn}</h2>
     <p>{data.størrelse}</p>
     <p>{data.kategori}</p>
