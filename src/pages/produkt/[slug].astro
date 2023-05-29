@@ -24,7 +24,10 @@ console.log(myData);
 ---
 
 <MainLayout title={myData.navn}>
-  <img src={myData.billede} alt="" />
+  <img
+    src={`../../public/produktbilleder/Maleri/${myData.billede}`}
+    alt="singleview_billede"
+  />
   <h2>{myData.navn}</h2>
   <p>{myData.størrelse}</p>
   <p>{myData.kategori}</p>
