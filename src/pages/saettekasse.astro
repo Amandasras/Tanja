@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout>
@@ -33,33 +34,53 @@ import MainLayout from "../layouts/MainLayout.astro";
   />
 
   <h3>Størrelser</h3>
-  <ul>
-    <li>20 x 20cm - 3500 kr.</li>
-    <li>30 x 30cm - 5500 kr.</li>
-    <li>40 x 40cm - 6500 kr.</li>
-    <li>50 x 50cm - 9000 kr.</li>
-  </ul>
-  <ul>
-    <li>60 x 60cm - 12.000 kr.</li>
-    <li>80 x 80cm - 16.000 kr.</li>
-    <li>100 x 100cm - 19.800 kr.</li>
-    <li>90 x 120cm - 32.800 kr.</li>
-  </ul>
+  <article class="mål">
+    <ul>
+      <li>20 x 20cm - 3500 kr.</li>
+      <li>30 x 30cm - 5500 kr.</li>
+      <li>40 x 40cm - 6500 kr.</li>
+      <li>50 x 50cm - 9000 kr.</li>
+    </ul>
+    <ul>
+      <li>60 x 60cm - 12.000 kr.</li>
+      <li>80 x 80cm - 16.000 kr.</li>
+      <li>100 x 100cm - 19.800 kr.</li>
+      <li>90 x 120cm - 32.800 kr.</li>
+    </ul>
+  </article>
 
   <p>Specialmål laves også, så de passer ind i netop dit hjem.</p>
 
   <article class="forms">
     <h2>Kontakt</h2>
-    <p>Skriv en kort beskrivels om din ønsker, og jeg vil kontakte dig.</p>
-    <p>
-      Jeg maler ud fra dine ønsker, men værket kommer til at følge min
-      malestil/teknik.
-    </p>
-    <p>Vi finder en tid til et personlig møde, for bedste resutalt.</p>
+    <div class="kontaktInfo">
+      <img class="kontaktImg" src="../../public/blyant.png" alt="blyant" />
+      <p>Skriv en kort beskrivels om din ønsker, og jeg vil kontakte dig.</p>
+    </div>
+    <div class="kontaktInfo">
+      <img class="kontaktImg" src="../../public/pensel.png" alt="pensel" />
+      <p>
+        Jeg maler ud fra dine ønsker, men værket kommer til at følge min
+        malestil/teknik.
+      </p>
+    </div>
+    <div class="kontaktInfo">
+      <img class="kontaktImg" src="../../public/ur.png" alt="ur" />
+      <p>Vi finder en tid til et personlig møde, for bedste resutalt.</p>
+    </div>
+    <form id="minForm">
+      <input type="text" name="name" placeholder="Navn" required />
+      <input type="text" name="telefon" placeholder="Telefon" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Kort beskrivelse" required
+      ></textarea>
+      <Button type="submit" variant="secondary" size="medium">Indsend</Button>
+    </form>
   </article>
 </MainLayout>
 
 <style>
+  /* ------ Splash ------ */
   .top {
     display: grid;
   }
@@ -69,10 +90,9 @@ import MainLayout from "../layouts/MainLayout.astro";
     grid-area: 1/1;
   }
 
-  img {
-    width: 100%;
+  h1 {
+    font-size: 1.5rem;
   }
-
   .tekst {
     display: flex;
     flex-direction: column;
@@ -84,7 +104,93 @@ import MainLayout from "../layouts/MainLayout.astro";
   .find {
     font-size: 1rem;
   }
-  h1 {
-    font-size: 1.5rem;
+  /* ----------------------- */
+  /* ----- Sættekasse billeder */
+  img {
+    width: 100%;
   }
+
+  /* --------------------- */
+
+  /* ---- Størrelser og lærredsmål */
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 3rem 0 1.5rem 0;
+  }
+  .mål {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+  /* ------------------------------ */
+
+  /* ------ Kontakt ------ */
+  .forms {
+    background-color: #eee7df;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    gap: 3rem;
+    margin: 3rem;
+    padding: 3rem;
+  }
+  .kontaktInfo {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-around;
+  }
+
+  .kontaktImg {
+    width: 15%;
+    height: 15%;
+  }
+  form {
+    text-align: left;
+    margin: 1rem;
+  }
+
+  input,
+  textarea {
+    border-radius: 3px;
+    border: none;
+  }
+
+  input {
+    margin-bottom: 10px;
+    padding: 0.8rem;
+  }
+  textarea {
+    padding: 1rem 3rem 3rem 1rem;
+    margin-bottom: 2rem;
+  }
+  /* -------------------------------- */
 </style>
+
+<script>
+  export default {
+    methods: {
+      handleSubmit(event) {
+        event.preventDefault();
+
+        // Hent formulardata
+        const formData = new FormData(event.target);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const message = formData.get("message");
+
+        // Udfør yderligere logik eller send data til serveren
+
+        // Nulstil formularen
+        event.target.reset();
+      },
+    },
+  };
+</script>
