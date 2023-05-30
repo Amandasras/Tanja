@@ -48,6 +48,53 @@ import Buttom from "../components/Button.astro"
 
 </section>
 
+<section class="overflader1">
+    <div class="kurser_b"> <img class="imgU" src="../temaBilleder/marmor.webp" alt=""></div>
+    <div class="overflader_tekst">
+        <h2 class="overskrift"> IMITATION AF MARMOR</h2>
+        
+        <h3 class="overskrift">D. 30-31 OKTOBER 2023</h3>
+        <p class="beskrivelse">
+            Imitation af marmor, også kaldet ´marmorering´er en dekorativ imitations teknik, hvor en marmor efterlignes til mindste detalje.
+             Man regner med, at marmorering har været udøvet i Europa gennem flere tusinde år. Fra udgravninger i Grækenland, har man i huse fra omkring 1500 år før vore tid fundet rester af marmorering. I løbet af weekenden, vil jeg gennemgå to forskellige marmortyper og det hele vil foregå på et niveau, hvor alle kan være med.
+        </p>
+        <p class="beskrivelse">      Prisen er inklusiv materialer, kompendium og selvfølgelig te/kaffe og kage.
+        Tilmelding er gyldig ved betaling, og kan fortrydes indtil en måned før kursusstart.
+        </p>
+          <p class="beskrivelse">  Pris: 500 pr. time
+            3000,- dagspris (7,5 time).</p>
+    
+            <a class="knap" href="../"> <Buttom variant=secondary size=medium> Book kursus</Buttom> </a>
+    
+            
+    </div>
+
+    </section>
+
+    <section class="overflader">
+        <div class="kurser_b"> <img class="imgU" src="../temaBilleder/tre.webp" alt=""></div>
+        <div class="overflader_tekst">
+            <h2 class="overskrift"> IMITATION AF TRÆ</h2>
+            
+            <h3 class="overskrift">D. 16-17 OKTOBER 2023</h3>
+            <p class="beskrivelse">           
+Imitation af træ, også kaldet ´Ådring´, er en gammel maleteknik.
+De ældst kendte eksempler findes på de omkring 4000 år gamle egyptiske sarkofager.
+Hovedformen er en imitation af træsort, men den dekorative virkning er målet. 
+Alle typer af træsorter kan imiteres. </p>
+            <p class="beskrivelse">      Prisen er inklusiv materialer, kompendium og selvfølgelig te/kaffe og kage.
+            Tilmelding er gyldig ved betaling, og kan fortrydes indtil en måned før kursusstart.
+            </p>
+              <p class="beskrivelse">  Pris: 500 pr. time
+                3000,- dagspris (7,5 time).</p>
+        
+                <a class="knap" href="../"> <Buttom variant=secondary size=medium> Book kursus</Buttom> </a>
+        
+                
+        </div>
+    
+        </section>
+
 
 
 
@@ -107,7 +154,9 @@ h1{
    display: flex;
    justify-content: center;
    text-align: center ;
-   padding-bottom: 1em;
+   padding: 2em;
+   font-weight: 600;
+   font-size: 1.3rem;
 }
 
 img{
@@ -121,6 +170,13 @@ img{
     background-color: #EEE7DF;
     padding: 3em 3em 3em 3em;
 }
+
+.overflader1{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3em 3em 3em 3em;
+}
+
 
 .overskrift {
     padding-top: 1em;
@@ -172,7 +228,19 @@ font-size: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 5em 5em 5em 5em;
+    gap: 1em;
 }
+
+.overflader1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5em 5em 5em 5em;  
+    gap: 1em; 
+}
+
+.overflader1 :nth-child(1) {
+    order: 2;
+  }
 }
 
 </style>
