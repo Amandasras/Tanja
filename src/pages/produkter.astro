@@ -1,6 +1,5 @@
 ---
 import Card from "../components/Card.astro";
-import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
 
 const data = await fetch(
@@ -16,20 +15,17 @@ const data = await fetch(
 ---
 
 <MainLayout>
-  <div class="splash">
-    <div class="blaFugl">
-      <img src="..//temaBilleder/alleProdukter.webp" alt="birdlife" />
+  
+    <div class="storBillede">
+      <img src="..//temaBilleder/alleProdukter.webp" alt="malerier på væg" />
+     <div class="tekst">
+      <p class="pIbillede">Find inspiration blandt</p>
+      <h1> ALLE PRODUKTER</h1></div> 
+      
     </div>
-  </div>
 
-  <article class="passionstekst">
-    <p>
-      Jeg tilbyder at male personlige sættekasser ud fra egne ønsker.  Disse
-      sættekasser bliver malet med en bestemt teknik, som giver en illusion af
-      ægte træ.  Det er op til dig, hvilke elementer, du ønsker, der skal indgå
-      i dit personlige maleri.  Kun fantasien sætter grænser.
-    </p>
-  </article>
+
+ 
 
   <section class="produkt">
     {
@@ -39,4 +35,42 @@ const data = await fetch(
     }
   </section>
 </MainLayout>
-<style></style>
+<style>
+.storBillede img {
+  max-width: 100vw;
+  margin-bottom: 2rem;
+}
+
+.section_top, .tekst{
+    grid-area: 1/1;
+}
+
+.tekst{
+    text-align: center;
+    color: white;
+    z-index: 2;
+   place-self: center;  
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:1000px){
+h1{ 
+font-size: 3rem;
+}
+}
+
+
+@media screen and (min-width:700px){
+    
+
+.pIbillede{
+    font-size: 1.5rem;   
+}
+
+
+
+}
+</style>
