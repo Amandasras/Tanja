@@ -26,9 +26,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 <section class="overflader">
 <div class="kurser_blop"> <img src="../temaBilleder/overflader.webp" alt=""></div>
 <div class="overflader_tekst">
-    <h2> IMITATION AF OVERFLADER</h2>
+    <h2 class="overskrift"> IMITATION AF OVERFLADER</h2>
     <p class="beskrivelse">15% rabat gælder kun kommende studerende på kunstuddannelser</p>
-    <h3>D. 26-27 JUNI 2023</h3>
+    <h3 class="overskrift">D. 26-27 JUNI 2023</h3>
     <p class="beskrivelse">Overflader er jo en grundlæggende illusionistisk teknik, hvor iagttageren ´bedrages´ og tror at det malede objekt er virkeligt. Til illusion af overflader bruges overvejende glasurteknik med en varieret og kreativ brug af forskelligt værktøj, udstyr og hjælpemidler. 
         Ved at anvende glasurteknik, behøver man ikke lade sine kreative evner gå ud over byggematerialernes fysiske kompleksiteter, men man kan tværtimod udføre en overflade med enkle teknikker. 
     </p>
@@ -95,13 +95,18 @@ h1{
 }
 /* ------------ */
 ¨
+.overskrift{
+    padding-top: 1em;
+}
+
 .overflader{
     display: grid;
     padding: 3em;
     grid-template-columns: 1fr;
+    
 }
 .overflader_tekst{
-
+    max-width: 80vw;
 }
 .beskrivelse{
   line-height: 151.4%;
