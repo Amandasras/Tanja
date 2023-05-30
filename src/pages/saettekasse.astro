@@ -2,4 +2,41 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout />
+<MainLayout>
+  <section class="top">
+    <div class="imge">
+      <img src="..//temaBilleder/alleProdukter.webp" alt="malerier på væg" />
+    </div>
+
+    <div class="tekst">
+      <p class="find">Find inspiration blandt</p>
+      <h1>ALLE PRODUKTER</h1>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .top {
+    display: grid;
+  }
+
+  .imge,
+  .tekst {
+    grid-area: 1/1;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .tekst {
+    text-align: center;
+    z-index: 2;
+    place-self: center;
+    color: white;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+</style>
