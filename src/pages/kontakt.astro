@@ -1,0 +1,38 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <article>
+    <h2>Information</h2>
+    <div>
+      <h4>Atelier/Værksted:</h4>
+      <p>Skt Hans Gade 19st th.</p>
+      <p>2200 Copenhagen "Trekanten"</p>
+    </div>
+    <div>
+      <h4>Mail:</h4>
+      <p>kaleovski@me.com</p>
+    </div>
+    <div>
+      <h4>Telefon:</h4>
+      <p>+45 61 72 22 82</p>
+    </div>
+    <div>
+      <h2>Udstillinger</h2>
+      <p>Galleri Gjøl, og i Bjerringbro’s kunstforening</p>
+      <p>Maj - august 2023</p>
+    </div>
+  </article>
+</MainLayout>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    margin: 3rem 0 4rem 0;
+    font-size: 1.3em;
+  }
+</style>
