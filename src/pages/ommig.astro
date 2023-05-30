@@ -4,6 +4,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <section>
+    <img
+      class="TanjaBlob"
+      src="../../public/tanjablob.png"
+      alt="Portræt af Tanja"
+    />
     <article class="ommigTekst">
       <h1>OM MIG</h1>
       <p>
@@ -22,30 +27,50 @@ import MainLayout from "../layouts/MainLayout.astro";
         gange sekundære, og flest gange tiertære.
       </p>
     </article>
-
-    <img
-      class="TanjaBlob"
-      src="../../public/tanjablob.png"
-      alt="Portræt af Tanja"
-    />
   </section>
 </MainLayout>
 
 <style>
-  .TanjaBlob {
-    width: 40%;
-    margin-bottom: 3rem;
-  }
   section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    overflow: hidden;
   }
+  .TanjaBlob {
+    width: 80%;
+    margin: 3rem;
+  }
+
   .ommigTekst {
-    display: flex;
-    flex-direction: column;
-    max-width: 35vw;
-    gap: 2rem;
-    margin: 3rem 0 0 3rem;
+    margin: 0 2rem 2rem 2rem;
+    background-color: #eee7df;
+    padding: 2rem;
+  }
+  .ommigTekst h1,
+  p {
+    margin: 1rem;
+    max-width: 65vw;
+  }
+
+  @media screen and (min-width: 800px) {
+    .TanjaBlob {
+      width: 40vw;
+      margin-bottom: 3rem;
+      order: 2;
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .ommigTekst {
+      margin: 5rem 2rem 5rem 2rem;
+      background-color: #eee7df;
+      padding: 2rem;
+    }
+    .ommigTekst h1,
+    p {
+      margin: 1rem;
+      max-width: 65vw;
+    }
   }
 </style>
