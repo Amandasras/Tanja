@@ -36,9 +36,12 @@ const data = await fetch(
 
 .produkt{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
- 
+  grid-template-columns: 1fr 1fr;
+ /*  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */ /* Tilpas antallet af kolonner efter behov */
+  grid-gap: 30px ; /* Tilføj en passende mellemrum mellem kortene */
+  margin: 4em 3em 3em 3em ;
 }
+
 
 .top{
   display:grid;
@@ -49,7 +52,7 @@ const data = await fetch(
 }
 
 img{
-  max-width: 100%;
+  width: 100%;
 }
 
 .tekst{
@@ -67,11 +70,17 @@ h1{
 h1{ 
 font-size: 4rem;
 }
+
+.produkt{
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 8em 6em 6em 6em;
+  grid-gap: 100px ;
+}    
+ 
 }
 
 
 @media screen and (min-width:700px){
-    
 
 .find{
     font-size: 1.5rem;   

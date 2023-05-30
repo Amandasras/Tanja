@@ -1,47 +1,63 @@
 ---
 const { data } = Astro.props;
-import Buttom from "../components/Button.astro"
 ---
 
-<section class="card">
-  <a href={`produkt/${data.slug}`}>
+<section class="card" >
+  <a class="a_tag" href={`produkt/${data.slug}`}>
    <div class="imgBox"> <img
       src={`../../public/produktbilleder/Maleri/${data.billede}`}
       alt="billede"
     />
   </div>
+</a>
   <div class="beskrivelse">
     <h2>{data.navn}</h2>
-    <p>{data.størrelse}</p>
-    <p>{data.kategori}</p>
+    <p class="size">{data.størrelse}</p>
+    <p class="kat">{data.kategori}</p>
   </div>
   
-  </a>
+
 </section>
 
 <style>
 
+
   .card{
-    margin: 2em;
+    display: flex;
+    flex-direction:column;
+    justify-content: end;
+    overflow: hidden;
   }
 
-  .beskrivelse{
-    align-self: baseline;
-  }
   img {
-    max-width: 100%;
+
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.03);
+  }
   }
 
-  .imgBox{
-    display: grid;
-    place-content: center;  
-  }
+
+.beskrivelse{
+    padding: 10px;
+  } 
+
+  .card img {
+max-width: 100%;
+  /* Skalér billedet for at fylde hele pladsen i billedboksen */
+}
 
  h2{
   font-size: 1rem;
  }
-a{
-  text-decoration: none;
-  
-}
+
+ .size{
+font-weight: 500;
+padding: 1em 0 1em 0;
+ }
+
+ .kat{
+  font-style: italic;
+ }
+
 </style>
