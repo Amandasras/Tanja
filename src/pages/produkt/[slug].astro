@@ -30,13 +30,29 @@ console.log(myData);
 ---
 
 <MainLayout title={myData.navn}>
-  <img
+ <section class="single_view"> <img
     src={`../../public/produktbilleder/Maleri/${myData.billede}`}
     alt="singleview_billede"
   />
-  <h2>{myData.navn}</h2>
+  <div class="single_tekst">
+    <h2>{myData.navn}</h2>
   <p>{myData.størrelse}</p>
   <p>{myData.kategori}</p>
+  </div>
+  
+</section>
 </MainLayout>
 
-<style></style>
+<style>
+.single_view{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(0,400px));
+  margin: 3em;
+
+}
+
+img{
+  max-width: 100%;
+}
+
+</style>

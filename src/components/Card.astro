@@ -14,6 +14,7 @@ const { data } = Astro.props;
     <h2>{data.navn}</h2>
     <p class="size">{data.størrelse}</p>
     <p class="kat">{data.kategori}</p>
+    <p class="pris">{data.pris} </p>
   </div>
   
 
@@ -56,8 +57,16 @@ font-weight: 500;
 padding: 1em 0 1em 0;
  }
 
+ .pris{
+font-weight: 600;
+font-size: 18px ;
+padding: 1em 0 1em 0;
+ }
+
  .kat{
   font-style: italic;
  }
+
+ @media
 
 </style>
