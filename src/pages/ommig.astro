@@ -10,7 +10,8 @@ import MainLayout from "../layouts/MainLayout.astro";
       alt="Portræt af Tanja"
     />
     <article class="ommigTekst">
-      <h1>OM MIG</h1>
+      <h1>Tanja Kaleovski</h1>
+      <h2>Kunstner og dekorationsmaler</h2>
       <p>
         At tage på oplevelse i en verden af illusioner. Jeg arbejder med at
         skabe stemninger og vække følelser hos folk. Beskueren må meget gerne
@@ -33,21 +34,29 @@ import MainLayout from "../layouts/MainLayout.astro";
 <style>
   section {
     overflow: hidden;
+    background-color: #eee7df;
+    padding: 2rem;
+    margin: 4rem 2rem 2rem 2rem;
   }
   .TanjaBlob {
     width: 80%;
     margin: 3rem;
   }
 
-  .ommigTekst {
-    margin: 0 2rem 2rem 2rem;
-    background-color: #eee7df;
-    padding: 2rem;
-  }
   .ommigTekst h1,
+  h2,
   p {
     margin: 1rem;
     max-width: 65vw;
+  }
+  .ommigTekst h1 {
+    font-size: 2.3rem;
+    font-weight: 400;
+  }
+  .ommigTekst h2 {
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
   }
 
   @media screen and (min-width: 800px) {
@@ -61,16 +70,29 @@ import MainLayout from "../layouts/MainLayout.astro";
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      overflow: hidden;
+      background-color: #eee7df;
+      margin: 0 0 2rem 0;
     }
     .ommigTekst {
-      margin: 5rem 2rem 5rem 2rem;
-      background-color: #eee7df;
+      margin: 7rem 2rem 5rem 2rem;
       padding: 2rem;
     }
     .ommigTekst h1,
+    h2,
     p {
       margin: 1rem;
       max-width: 65vw;
+    }
+
+    .ommigTekst h1 {
+      font-size: 3rem;
+      font-weight: 400;
+    }
+    .ommigTekst h2 {
+      font-size: 2rem;
+      font-weight: 200;
+      margin-bottom: 2rem;
     }
   }
 </style>
