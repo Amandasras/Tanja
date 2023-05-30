@@ -3,28 +3,49 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <article>
-    <h1>OM MIG</h1>
-    <p>
-      At tage på oplevelse i en verden af illusioner. Jeg arbejder med at skabe
-      stemninger og vække følelser hos folk. Beskueren må meget gerne undres. At
-      det flade lærred kan vokse ud, og blive en form for installation eller
-      levende genstand i rummet. At beskueren drages og “bedrages” og det
-      umiddelbare liv der skabes, med teknikker, flid og mit kunstnerisk billed
-      univers, kommer til live.
-    </p>
-    <p>
-      Mine inspirationskilder ligger først og fremmest i det klassiske trompe
-      l´oeil-maleri. En type maleri, kendt siden antikken, hvor man skildrer
-      objekter så realistisk, at de ser ud, som om de er virkelige. Ingen er
-      perfekte, rene i farven hele tiden. Nogen gange er vi primære, nogen gange
-      sekundære, og flest gange tiertære.
-    </p>
-  </article>
+  <section>
+    <article class="ommigTekst">
+      <h1>OM MIG</h1>
+      <p>
+        At tage på oplevelse i en verden af illusioner. Jeg arbejder med at
+        skabe stemninger og vække følelser hos folk. Beskueren må meget gerne
+        undres. At det flade lærred kan vokse ud, og blive en form for
+        installation eller levende genstand i rummet. At beskueren drages og
+        “bedrages” og det umiddelbare liv der skabes, med teknikker, flid og mit
+        kunstnerisk billed univers, kommer til live.
+      </p>
+      <p>
+        Mine inspirationskilder ligger først og fremmest i det klassiske trompe
+        l´oeil-maleri. En type maleri, kendt siden antikken, hvor man skildrer
+        objekter så realistisk, at de ser ud, som om de er virkelige. Ingen er
+        perfekte, rene i farven hele tiden. Nogen gange er vi primære, nogen
+        gange sekundære, og flest gange tiertære.
+      </p>
+    </article>
 
-  <div>
-    <img src="" alt="" />
-  </div>
+    <img
+      class="TanjaBlob"
+      src="../../public/tanjablob.png"
+      alt="Portræt af Tanja"
+    />
+  </section>
 </MainLayout>
 
-<style></style>
+<style>
+  .TanjaBlob {
+    width: 40%;
+    margin-bottom: 3rem;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .ommigTekst {
+    display: flex;
+    flex-direction: column;
+    max-width: 35vw;
+    gap: 2rem;
+    margin: 3rem 0 0 3rem;
+  }
+</style>
