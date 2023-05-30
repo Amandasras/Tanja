@@ -1,6 +1,7 @@
 ---
 
 import MainLayout from "../layouts/MainLayout.astro";
+import Buttom from "../components/Button.astro"
 ---
 
 <MainLayout>
@@ -24,7 +25,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 
 <section class="overflader">
-<div class="kurser_blop"> <img src="../temaBilleder/overflader.webp" alt=""></div>
+<div class="kurser_b"> <img src="../temaBilleder/overflader.webp" alt=""></div>
 <div class="overflader_tekst">
     <h2 class="overskrift"> IMITATION AF OVERFLADER</h2>
     <p class="beskrivelse">15% rabat gælder kun kommende studerende på kunstuddannelser</p>
@@ -37,8 +38,13 @@ import MainLayout from "../layouts/MainLayout.astro";
     </p>
       <p class="beskrivelse">  Pris: 500 pr. time
         3000,- dagspris (7,5 time).</p>
+
+        <a class="knap" href="../"> <Buttom variant=secondary size=medium> Book kursus</Buttom> </a>
+
         
 </div>
+
+
 
 </section>
 
@@ -48,6 +54,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
 <style>
+
+
 /* Slideshow */
 .slideshow{
     display: grid;
@@ -94,17 +102,30 @@ h1{
   }
 }
 /* ------------ */
-¨
-.overskrift{
-    padding-top: 1em;
+
+.kurser_b{
+    display: inline;
+    justify-self: center;
 }
+.knap{
+
+    display: grid;
+    text-decoration: none;
+    justify-content: center;
+    padding: 1em 0 1em 0;
+}
+.overskrift {
+    padding-top: 1em;
+}¨
 
 .overflader{
     display: grid;
     padding: 3em;
     grid-template-columns: 1fr;
-    
+    background-color: #EEE7DF;
+    padding: 3em 0 0 3em;
 }
+
 .overflader_tekst{
     max-width: 80vw;
 }
@@ -120,10 +141,6 @@ h1{
    padding-bottom: 1em;
 }
 
-.overflader{
-    background-color: #EEE7DF;
-    padding: 1em 0 0 3em;
-}
 
 img{
     max-width: 100%;
@@ -150,6 +167,7 @@ font-size: 3rem;
 .overflader{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 3em 0 0 3em;
 }
 }
 
