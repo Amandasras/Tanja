@@ -5,7 +5,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout>
   <section class="top">
     <div class="imge">
-      <img src="..//temaBilleder/.webp" alt="malerier på væg" />
+      <img
+        src="..//temaBilleder/saettekasser.webp"
+        alt="Tanja meed sættekasse"
+      />
     </div>
 
     <div class="tekst">
@@ -30,13 +33,18 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   .tekst {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    /* text-align: center;
     z-index: 2;
     place-self: center;
-    color: white;
+    color: white; */
   }
-
+  .find {
+    font-size: 1rem;
+  }
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 </style>
