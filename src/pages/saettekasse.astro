@@ -17,20 +17,19 @@ import Button from "../components/Button.astro";
       <h1>SÆTTEKASSE</h1>
     </div>
   </section>
-  <p>
-    Jeg tilbyder at male personlige sættekasser ud fra egne ønsker.  Disse
-    sættekasser bliver malet med en bestemt teknik, som giver en illusion af
-    ægte træ.  Det er op til dig, hvilke elementer, du ønsker, der skal indgå i
-    dit personlige maleri.  Kun fantasien sætter grænser.
-  </p>
+  <article class="beskrivelse">
+    <p>
+      Jeg tilbyder at male personlige sættekasser ud fra egne ønsker.  Disse
+      sættekasser bliver malet med en bestemt teknik, som giver en illusion af
+      ægte træ.  Det er op til dig, hvilke elementer, du ønsker, der skal indgå
+      i dit personlige maleri.  Kun fantasien sætter grænser.
+    </p>
+  </article>
 
   <img
+    class="eksempelB"
     src="../../public/produktbilleder/Maleri/bluebanana.webp"
     alt="Lyttebøffer"
-  />
-  <img
-    src="../../public/produktbilleder/Maleri/bluebanana.webp"
-    alt="Amagerehylde"
   />
 
   <h3>Størrelser</h3>
@@ -89,7 +88,9 @@ import Button from "../components/Button.astro";
   .tekst {
     grid-area: 1/1;
   }
-
+  .imge img {
+    width: 100%;
+  }
   h1 {
     font-size: 1.5rem;
   }
@@ -105,9 +106,15 @@ import Button from "../components/Button.astro";
     font-size: 1rem;
   }
   /* ----------------------- */
+  /* ----- Beskrivelse --------- */
+  .beskrivelse {
+    text-align: center;
+    margin: 3rem;
+  }
   /* ----- Sættekasse billeder */
-  img {
-    width: 100%;
+  .eksempelB {
+    width: 80%;
+    margin: 2rem;
   }
 
   /* --------------------- */
@@ -117,7 +124,7 @@ import Button from "../components/Button.astro";
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
-    margin: 3rem 0 1.5rem 0;
+    margin: 2rem 0 1.5rem 0;
   }
   .mål {
     display: flex;
