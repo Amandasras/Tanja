@@ -1,6 +1,6 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import "../styles/style.css";
+// import "../styles/style.css";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -17,6 +17,12 @@ import Footer from "../components/Footer.astro";
     <main>
       <slot />
     </main>
-  <Footer/>
-</body>
+    <Footer />
+  </body>
 </html>
+
+<style>
+  body {
+    background-color: #f9f6f4;
+  }
+</style>
