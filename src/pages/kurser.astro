@@ -103,27 +103,37 @@ h1{
 }
 /* ------------ */
 
+.adresse{
+   display: flex;
+   justify-content: center;
+   text-align: center ;
+   padding-bottom: 1em;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Overflader */
+.overflader{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #EEE7DF;
+    padding: 3em 3em 3em 3em;
+}
+
+.overskrift {
+    padding-top: 1em;
+}¨
 .kurser_b{
     display: inline;
     justify-self: center;
 }
 .knap{
-
     display: grid;
     text-decoration: none;
     justify-content: center;
     padding: 1em 0 1em 0;
-}
-.overskrift {
-    padding-top: 1em;
-}¨
-
-.overflader{
-    display: grid;
-    padding: 3em;
-    grid-template-columns: 1fr;
-    background-color: #EEE7DF;
-    padding: 3em 0 0 3em;
 }
 
 .overflader_tekst{
@@ -134,17 +144,11 @@ h1{
   padding-top: 1em;
   font-weight: 500;
 }
-.adresse{
-   display: flex;
-   justify-content: center;
-   text-align: center ;
-   padding-bottom: 1em;
-}
+
+/* --------- */
 
 
-img{
-    max-width: 100%;
-}
+
 
 @media screen and (min-width:700px){
     
@@ -167,7 +171,7 @@ font-size: 3rem;
 .overflader{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 3em 0 0 3em;
+    padding: 5em 5em 5em 5em;
 }
 }
 
