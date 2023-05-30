@@ -5,7 +5,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout>
   <section class="top">
     <div class="imge">
-      <img src="..//temaBilleder/.webp" alt="malerier på væg" />
+      <img
+        src="..//temaBilleder/saettekasser.webp"
+        alt="Tanja meed sættekasse"
+      />
     </div>
 
     <div class="tekst">
@@ -13,6 +16,47 @@ import MainLayout from "../layouts/MainLayout.astro";
       <h1>SÆTTEKASSE</h1>
     </div>
   </section>
+  <p>
+    Jeg tilbyder at male personlige sættekasser ud fra egne ønsker.  Disse
+    sættekasser bliver malet med en bestemt teknik, som giver en illusion af
+    ægte træ.  Det er op til dig, hvilke elementer, du ønsker, der skal indgå i
+    dit personlige maleri.  Kun fantasien sætter grænser.
+  </p>
+
+  <img
+    src="../../public/produktbilleder/Maleri/bluebanana.webp"
+    alt="Lyttebøffer"
+  />
+  <img
+    src="../../public/produktbilleder/Maleri/bluebanana.webp"
+    alt="Amagerehylde"
+  />
+
+  <h3>Størrelser</h3>
+  <ul>
+    <li>20 x 20cm - 3500 kr.</li>
+    <li>30 x 30cm - 5500 kr.</li>
+    <li>40 x 40cm - 6500 kr.</li>
+    <li>50 x 50cm - 9000 kr.</li>
+  </ul>
+  <ul>
+    <li>60 x 60cm - 12.000 kr.</li>
+    <li>80 x 80cm - 16.000 kr.</li>
+    <li>100 x 100cm - 19.800 kr.</li>
+    <li>90 x 120cm - 32.800 kr.</li>
+  </ul>
+
+  <p>Specialmål laves også, så de passer ind i netop dit hjem.</p>
+
+  <article class="forms">
+    <h2>Kontakt</h2>
+    <p>Skriv en kort beskrivels om din ønsker, og jeg vil kontakte dig.</p>
+    <p>
+      Jeg maler ud fra dine ønsker, men værket kommer til at følge min
+      malestil/teknik.
+    </p>
+    <p>Vi finder en tid til et personlig møde, for bedste resutalt.</p>
+  </article>
 </MainLayout>
 
 <style>
@@ -30,13 +74,17 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   .tekst {
-    text-align: center;
-    z-index: 2;
-    place-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    justify-content: center;
     color: white;
+    margin: 2rem;
   }
-
+  .find {
+    font-size: 1rem;
+  }
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 </style>
