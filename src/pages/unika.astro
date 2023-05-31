@@ -40,7 +40,7 @@ const data = await fetch(
 }
     .produkt{
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
      /*  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */ /* Tilpas antallet af kolonner efter behov */
       grid-gap: 30px ; /* Tilføj en passende mellemrum mellem kortene */
       margin: 4em 3em 3em 3em ;
