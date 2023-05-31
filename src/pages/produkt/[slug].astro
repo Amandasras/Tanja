@@ -2,6 +2,8 @@
 // Dette er singleview sitet.
 
 import MainLayout from "../../layouts/MainLayout.astro";
+import Button from "../../components/Button.astro";
+
 export async function getStaticPaths() {
   const data = await fetch(
     " https://pbwewzzxmajwtimxhwvi.supabase.co/rest/v1/produkter",
@@ -27,6 +29,7 @@ export async function getStaticPaths() {
 const { myData } = Astro.props;
 console.log(myData);
 // Dette gør at vi kan bruge myData senere nede i singleviewet.
+
 ---
 
 <MainLayout title={myData.navn}>
@@ -36,23 +39,44 @@ console.log(myData);
   />
   <div class="single_tekst">
     <h2>{myData.navn}</h2>
-  <p>{myData.størrelse}</p>
-  <p>{myData.kategori}</p>
+  <p class="size">{myData.størrelse}</p>
+  <p class="kat">{myData.kategori}</p>
+  <p class="pris">{myData.pris} </p>
+  <Button variant="secondary" size="small">
+    LÆG I KURV
+  </Button>
   </div>
   
 </section>
 </MainLayout>
 
 <style>
+
+  
 .single_view{
   display: grid;
   grid-template-columns:repeat(auto-fit, minmax(0,400px));
   margin: 3em;
-
 }
 
 img{
   max-width: 100%;
+}
+
+.single_tekst{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+  }
+
+@media screen and (min-width: 900px){
+  h2{
+    font-size: 36px;
+  }
+
+  .single_tekst{
+    margin: 5em;
+  }
 }
 
 </style>
