@@ -216,102 +216,104 @@ import Button from "../components/Button.astro";
     h1 {
       font-size: 5rem;
     }
-  }
-  /* -------------------- */
-  /* ----- Beskrivelse --------- */
-  .beskrivelse {
-    display: flex;
-    flex-direction: column;
-  }
-  .beskrivelse p {
-    justify-content: center;
-    align-items: center;
-    max-width: 65vw;
-    text-align: center;
-  }
-  /* ----- Sættekasse billeder */
-  .sattekasser {
-    display: flex;
-    flex-direction: row;
-    margin: 0 2rem 0 2rem;
-    gap: 1rem;
-  }
-  .eksempelB {
-    width: 80%;
-  }
 
-  /* --------------------- */
+    /* -------------------- */
+    /* ----- Beskrivelse --------- */
+    .beskrivelse {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .beskrivelse p {
+      max-width: 65vw;
+      text-align: center;
+    }
+    /* ----- Sættekasse billeder ----- */
+    .sattekasser {
+      display: flex;
+      flex-direction: row;
+      margin: 0 2rem 0 2rem;
+      gap: 1rem;
+      width: 60%;
+    }
+    .eksempelB {
+      justify-items: center;
+      align-items: center;
+    }
 
-  /* ---- Størrelser og lærredsmål */
-  h3 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    margin: 2rem 0 1.5rem 0;
-  }
-  .mål {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 1rem;
-  }
+    /* --------------------- */
 
-  ul {
-    list-style: none;
-  }
-  /* ------------------------------ */
+    /* ---- Størrelser og lærredsmål */
+    h3 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 2rem 0 1.5rem 0;
+    }
+    .mål {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 1rem;
+    }
 
-  /* ------ Kontakt ------ */
-  .forms {
-    background-color: #eee7df;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: left;
-    gap: 3rem;
-    margin: 3rem;
-    padding: 2rem;
-  }
-  .forms h2 {
-    font-size: 8vw;
-    font-weight: 600;
-  }
+    ul {
+      list-style: none;
+    }
+    /* ------------------------------ */
 
-  .strP {
-    margin: 2rem 2rem 6rem 2rem;
-  }
-  .kontaktInfo {
-    display: flex;
-    flex-direction: row;
-    justify-items: space-around;
-  }
+    /* ------ Kontakt ------ */
+    .forms {
+      background-color: #eee7df;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: left;
+      gap: 3rem;
+      margin: 3rem;
+      padding: 2rem;
+    }
+    .forms h2 {
+      font-size: 8vw;
+      font-weight: 600;
+    }
 
-  .kontaktImg {
-    width: 15%;
-    object-fit: contain;
-    margin: 0.5rem;
-  }
-  form {
-    text-align: left;
-    margin: 1rem;
-    padding-left: 1.5rem;
-  }
+    .strP {
+      margin: 2rem 2rem 6rem 2rem;
+    }
+    .kontaktInfo {
+      display: flex;
+      flex-direction: row;
+      justify-items: space-around;
+    }
 
-  input,
-  textarea {
-    border-radius: 3px;
-    border: none;
-  }
+    .kontaktImg {
+      width: 15%;
+      object-fit: contain;
+      margin: 0.5rem;
+    }
+    form {
+      text-align: left;
+      margin: 1rem;
+      padding-left: 1.5rem;
+    }
 
-  input {
-    margin-bottom: 10px;
-    padding: 0.8rem;
+    input,
+    textarea {
+      border-radius: 3px;
+      border: none;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 0.8rem;
+    }
+    textarea {
+      padding: 1rem 3rem 3rem 1rem;
+      margin-bottom: 2rem;
+    }
+    /* -------------------------------- */
   }
-  textarea {
-    padding: 1rem 3rem 3rem 1rem;
-    margin-bottom: 2rem;
-  }
-  /* -------------------------------- */
 </style>
 
 <!-- <script>
