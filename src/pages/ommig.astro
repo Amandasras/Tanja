@@ -27,7 +27,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         perfekte og rene i farven hele tiden. Nogle gange er vi primære, nogen
         gange sekundære, og flest gange tiertære."
       </p>
-      <p>- Tanja Kaleovski</p>
+      <p class="TanjaK">- Tanja Kaleovski</p>
     </article>
   </section>
 </MainLayout>
@@ -59,6 +59,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     font-size: 1.2rem;
     font-weight: 200;
     margin-bottom: 2rem;
+  }
+
+  .TanjaK {
+    font-style: italic;
+    color: #525252;
   }
 
   @media screen and (min-width: 800px) {
@@ -94,6 +99,11 @@ import MainLayout from "../layouts/MainLayout.astro";
       font-size: 2rem;
       font-weight: 200;
       margin-bottom: 2rem;
+    }
+
+    .TanjaK {
+      font-style: italic;
+      color: #525252;
     }
   }
 </style>
