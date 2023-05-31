@@ -33,18 +33,21 @@ console.log(myData);
 ---
 
 <MainLayout title={myData.navn}>
- <section class="single_view"> <img
-    src={`../../public/produktbilleder/Maleri/${myData.billede}`}
+ <section class="single_view"> 
+  <img src={`../../public/produktbilleder/Maleri/${myData.billede}`}
     alt="singleview_billede"
   />
   <div class="single_tekst">
     <h2>{myData.navn}</h2>
   <p class="size">{myData.størrelse}</p>
   <p class="kat">{myData.kategori}</p>
-  <p class="pris">{myData.pris} </p>
-  <Button variant="secondary" size="small">
-    LÆG I KURV
-  </Button>
+  <div class="pris_knap">
+    <p class="pris">{myData.pris} </p>
+    <Button variant="secondary" size="small">
+      LÆG I KURV
+    </Button>
+  </div>
+
   </div>
   
 </section>
@@ -52,30 +55,67 @@ console.log(myData);
 
 <style>
 
-  
 .single_view{
   display: grid;
   grid-template-columns:repeat(auto-fit, minmax(0,400px));
   margin: 3em;
+ justify-content: center
 }
+ .kat{
+  font-style: italic;
+ }
+ .pris_knap{
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+  padding-top: 2rem;
+ } ¨
 
-img{
-  max-width: 100%;
-}
 
 .single_tekst{
  display: flex;
  flex-direction: column;
- justify-content: space-evenly;
+ gap: 1em;
+  }
+
+  .pris{
+font-weight: 500;
+font-size: 18px ;
+color: rgb(72, 71, 71);
+ }
+
+ img{
+    max-width: 100%;
   }
 
 @media screen and (min-width: 900px){
   h2{
-    font-size: 36px;
+    font-size: 1.5em;
   }
 
   .single_tekst{
-    margin: 5em;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: 1em;
+  }
+
+  .single_tekst{
+ display: flex;
+ flex-direction: column;
+ gap: 1em;
+ margin-left: 2em;
+ padding-top: 2em;
+  }
+  .pris_knap{
+  display: flex;
+  flex-direction: column;
+align-items: flex-start;
+gap: 1em;
+  padding-top: 2rem;
+ } ¨
+  img{
+    max-width: 100%;
   }
 }
 
