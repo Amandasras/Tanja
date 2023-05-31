@@ -29,12 +29,12 @@ import Button from "../components/Button.astro";
   <div class="sattekasser">
     <img
       class="eksempelB"
-      src="../../public/produktbilleder/Maleri/bluebanana.webp"
+      src="../../public/produktbilleder/Customized/settekasse2.webp"
       alt="Lyttebøffer"
     />
     <img
       class="eksempelB"
-      src="../../public/produktbilleder/Maleri/bluebanana.webp"
+      src="../../public/produktbilleder/Customized/settekasse.webp"
       alt="Lyttebøffer"
     />
   </div>
@@ -59,36 +59,57 @@ import Button from "../components/Button.astro";
   </div>
   <article class="forms">
     <h2>Kontakt</h2>
-    <div class="kontaktInfo">
-      <img class="kontaktImg" src="../../public/blyant.svg" alt="blyant" />
-      <p>
-        Skriv en kort beskrivelse af dine ønsker til billedet, og jeg vil
-        kontakte dig.
-      </p>
-    </div>
-    <div class="kontaktInfo">
-      <img class="kontaktImg" src="../../public/pensel.svg" alt="pensel" />
-      <p>
-        Jeg maler ud fra dine ønsker, men værket kommer til at følge min
-        malestil/teknik.
-      </p>
-    </div>
-    <div class="kontaktInfo">
-      <img class="kontaktImg" src="../../public/ur.svg" alt="ur" />
-      <p>
-        Vi finder en tid til et personligt møde, for at opnå bedste resutalt på
-        værket.
-      </p>
-    </div>
-    <form id="minForm">
-      <input type="text" name="name" placeholder="Navn" required />
-      <input type="text" name="telefon" placeholder="Telefon" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" placeholder="Kort beskrivelse" required
-      ></textarea>
-      <Button type="submit" variant="secondary" size="medium">Indsend</Button>
-    </form>
+    <article class="flexbox">
+      <div class="info">
+        <div class="kontaktInfo">
+          <img class="kontaktImg" src="../../public/blyant.svg" alt="blyant" />
+          <p>
+            Skriv en kort beskrivelse af dine ønsker til billedet, og jeg vil
+            kontakte dig.
+          </p>
+        </div>
+        <div class="kontaktInfo">
+          <img class="kontaktImg" src="../../public/pensel.svg" alt="pensel" />
+          <p>
+            Jeg maler ud fra dine ønsker, men værket kommer til at følge min
+            malestil/teknik.
+          </p>
+        </div>
+        <div class="kontaktInfo">
+          <img class="kontaktImg" src="../../public/ur.svg" alt="ur" />
+          <p>
+            Vi finder en tid til et personligt møde, for at opnå bedste resutalt
+            på værket.
+          </p>
+        </div>
+      </div>
+      <form id="minForm">
+        <input type="text" name="name" placeholder="Navn" required />
+        <input type="text" name="telefon" placeholder="Telefon" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Kort beskrivelse" required
+        ></textarea>
+        <Button type="submit" variant="secondary" size="medium">Indsend</Button>
+      </form>
+    </article>
   </article>
+
+  <a href=""
+    ><img src="../../public/billeder/instagram.webp" alt="Instagram" /> TANJA_KALEOVSKI</a
+  >
+  <a href=""
+    ><img src="../../public/billeder/facebook.webp" alt="Facebook" />TANJA
+    KALEOVSKI</a
+  >
+
+  <p>
+    “Et kunstværk, der kan sige det hele, og samtidig vise det ekstra, der
+    fortæller en historie”
+  </p>
+
+  <img src="../../public/customBillede.webp" alt="Kundebillede" />
+  <img src="../../public/customBillede2.webp" alt="Kundebillede" />
+  <img src="../../public/customBillede3.webp" alt="Kundebillede" />
 </MainLayout>
 
 <style>
@@ -179,6 +200,7 @@ import Button from "../components/Button.astro";
     display: flex;
     flex-direction: row;
     justify-items: space-around;
+    margin-bottom: 1rem;
   }
 
   .kontaktImg {
@@ -227,18 +249,18 @@ import Button from "../components/Button.astro";
     .beskrivelse p {
       max-width: 65vw;
       text-align: center;
+      font-size: 1.5rem;
+      margin: 2rem;
     }
     /* ----- Sættekasse billeder ----- */
     .sattekasser {
       display: flex;
       flex-direction: row;
-      margin: 0 2rem 0 2rem;
       gap: 1rem;
-      width: 60%;
+      padding: 0 16rem 0 16rem;
     }
     .eksempelB {
-      justify-items: center;
-      align-items: center;
+      max-width: 60%;
     }
 
     /* --------------------- */
@@ -246,19 +268,24 @@ import Button from "../components/Button.astro";
     /* ---- Størrelser og lærredsmål */
     h3 {
       text-align: center;
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: 500;
       margin: 2rem 0 1.5rem 0;
     }
     .mål {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      margin: 1rem;
+      justify-content: center;
+      gap: 5rem;
     }
 
     ul {
       list-style: none;
+      font-size: 1.5rem;
+    }
+    .strP {
+      text-align: center;
+      font-size: 1.5rem;
     }
     /* ------------------------------ */
 
@@ -270,29 +297,40 @@ import Button from "../components/Button.astro";
       justify-content: space-around;
       align-items: left;
       gap: 3rem;
-      margin: 3rem;
+      margin: 3rem 7rem 3rem 7rem;
       padding: 2rem;
     }
-    .forms h2 {
-      font-size: 8vw;
-      font-weight: 600;
+
+    .flexbox {
+      display: flex;
+      flex-direction: row;
     }
 
-    .strP {
-      margin: 2rem 2rem 6rem 2rem;
+    .info {
+      margin-bottom: 4rem;
     }
+
+    .forms h2 {
+      font-size: 4vw;
+      font-weight: 500;
+      margin: 1.5rem 0 0 3.5rem;
+    }
+
     .kontaktInfo {
       display: flex;
       flex-direction: row;
       justify-items: space-around;
+      margin: 2rem 0 2rem 2rem;
     }
 
     .kontaktImg {
-      width: 15%;
+      width: 5%;
       object-fit: contain;
-      margin: 0.5rem;
+      margin: 0 1rem 1rem 0;
     }
     form {
+      display: flex;
+      flex-direction: column;
       text-align: left;
       margin: 1rem;
       padding-left: 1.5rem;
@@ -302,6 +340,8 @@ import Button from "../components/Button.astro";
     textarea {
       border-radius: 3px;
       border: none;
+      width: 150%;
+      height: 50%;
     }
 
     input {
