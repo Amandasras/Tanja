@@ -19,10 +19,13 @@ import Button from "../components/Button.astro";
   </section>
   <article class="beskrivelse">
     <p>
-      Jeg tilbyder at male personlige sættekasser ud fra egne ønsker.  Disse
-      sættekasser bliver malet med en bestemt teknik, som giver en illusion af
-      ægte træ.  Det er op til dig, hvilke elementer, du ønsker, der skal indgå
-      i dit personlige maleri.  Kun fantasien sætter grænser.
+      Sættekassen er en form for kærlighedserklæring til din kære eller dig
+      selv. De fortæller en historie om dig og din færden i livet, og er en
+      reminder om alle de ting du har opnået og oplevet.
+    </p>
+    <p>
+      Du vælger selv hvilke elementer, du ønsker, der skal indgå i dit
+      personlige maleri. Kun fantasien sætter grænser.
     </p>
   </article>
 
@@ -94,23 +97,27 @@ import Button from "../components/Button.astro";
     </article>
   </article>
 
+  <section class="findOs">
+    <div class="iconsammen">
+      <a class="icon" href=""
+        ><img src="../../public/billeder/instagram.webp" alt="Instagram" />
+        <p>TANJA_KALEOVSKI</p>
+      </a>
+      <a class="icon" href=""
+        ><img src="../../public/billeder/facebook.webp" alt="Facebook" />
+        <p>TANJA KALEOVSKI</p>
+      </a>
+    </div>
 
-<section class="findOs">
-  <div class="iconsammen">
-  <a class="icon" href=""><img src="../../public/billeder/instagram.webp" alt="Instagram" /> <p>TANJA_KALEOVSKI</p> </a>
-<a class="icon" href=""><img src="../../public/billeder/facebook.webp" alt="Facebook" /> <p>TANJA KALEOVSKI</p> </a>
-</div>
-
-<p class="citat">
-  “Et kunstværk, der kan sige det hele, og samtidig vise det ekstra, der
-  fortæller en historie”
-</p>
-  <div class="instagram">
-  <img src="../../public/customBillede.webp" alt="Kundebillede" />
-  <img src="../../public/customBillede2.webp" alt="Kundebillede" />
- 
-</div>
-</section>
+    <p class="citat">
+      “Et kunstværk, der kan sige det hele, og samtidig vise det ekstra, der
+      fortæller en historie”
+    </p>
+    <div class="instagram">
+      <img src="../../public/customBillede.webp" alt="Kundebillede" />
+      <img src="../../public/customBillede2.webp" alt="Kundebillede" />
+    </div>
+  </section>
 </MainLayout>
 
 <style>
@@ -143,8 +150,13 @@ import Button from "../components/Button.astro";
   /* ----------------------- */
   /* ----- Beskrivelse --------- */
   .beskrivelse {
-    text-align: center;
-    margin: 3rem;
+    text-align: left;
+    margin: 4rem;
+  }
+  .beskrivelse p {
+    max-width: 65vw;
+    font-size: 1rem;
+    margin: 1.5rem;
   }
   /* ----- Sættekasse billeder */
   .sattekasser {
@@ -234,47 +246,47 @@ import Button from "../components/Button.astro";
 
   /* some billeder */
 
-  .instagram{
+  .instagram {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0,400px));
-    gap: 2em;  
+    grid-template-columns: repeat(2, minmax(0, 400px));
+    gap: 2em;
     justify-content: center;
     padding-bottom: 1.4rem;
-   }
+  }
 
-   .instagram img{
+  .instagram img {
     max-width: 100%;
-   }
+  }
 
-   .findOs{
-       background-color: #eee7df ; 
-       padding: 1.3rem;
-    }
+  .findOs {
+    background-color: #eee7df;
+    padding: 1.3rem;
+  }
 
-    .iconsammen{
-      display: flex;   
-      justify-content: center;
-      gap: 4em;
-     }
+  .iconsammen {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+  }
 
-    .icon img{
-      width: 30px;
-    }
-    .icon{
-      display: flex;
+  .icon img {
+    width: 30px;
+  }
+  .icon {
+    display: flex;
     align-items: center;
-      text-decoration: none;
-      gap: 1em;
-      margin-bottom: 2em;
-  color:#302D2D;
-    }
+    text-decoration: none;
+    gap: 1em;
+    margin-bottom: 2em;
+    color: #302d2d;
+  }
 
-    .citat{
-      font-style: italic;
-      text-align: center;
-      font-weight: 500;
-      margin-bottom: 2em;
-    }
+  .citat {
+    font-style: italic;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 2em;
+  }
   @media screen and (min-width: 800px) {
     /* ------ Splash ------- */
     .find {
@@ -290,12 +302,13 @@ import Button from "../components/Button.astro";
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin: 7rem;
     }
     .beskrivelse p {
       max-width: 65vw;
       text-align: center;
       font-size: 1.5rem;
-      margin: 2rem;
+      margin: 1.5rem;
     }
     /* ----- Sættekasse billeder ----- */
     .sattekasser {
