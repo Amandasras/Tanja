@@ -14,6 +14,17 @@ const data = await fetch(
 ).then((res) => res.json());
 ---
 <MainLayout> 
+    <section class="top">
+        <div class="imge"><img src="..//temaBilleder/unika.webp" alt="malerier på væg" /></div>
+          
+         <div class="tekst">
+          <p class="find">Orginale kunstværker</p>
+          <h1> 
+            <span class="shop"> Shop </span> UNIKA</h1></div> 
+          
+        </div>
+      </section>
+
 <section class="produkt">
     {
       data.map((produkt) => {
@@ -24,7 +35,9 @@ const data = await fetch(
 </MainLayout>
 
 <style>
-
+.shop{
+    font-weight: 400;
+}
     .produkt{
       display: grid;
       grid-template-columns: 1fr 1fr;
