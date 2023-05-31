@@ -15,7 +15,9 @@
 
 /* Til at sætte tekst ind på baggrundsbilledet, men i tvivl om hvordan det gør med navigationen */
 
-
+h1{
+  font-size: 2em;
+}
 
 .blaFugl img {
   max-width: 100vw;
