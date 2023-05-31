@@ -46,15 +46,17 @@ import "../styles/style.css";
     transition: transform 0.3s ease-in-out;
 }
 
+/* Få nav til at blive i toppen når man scroller */
   .navigation.scrolled {
   position: fixed;
   top: 0;
    left: 0;
    width: 100%;
-   z-index: 9999;
+   z-index: 999;
    background-color: #F9F6F4;
  
 }
+/* --- */
 .menu {
         display: none;
         left: 0;
@@ -149,6 +151,7 @@ padding-right:2em;
   border: none;
   cursor: pointer;
  background-color: #F9F6F4;
+ z-index: 10;
 }
 
 .dropdown-content a {
@@ -156,6 +159,7 @@ padding-right:2em;
  padding: 4px;
   text-decoration: none;
   display:block;
+  z-index: 10;
 }
 
 a:hover{
