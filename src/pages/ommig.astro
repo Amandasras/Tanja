@@ -30,9 +30,26 @@ import MainLayout from "../layouts/MainLayout.astro";
       <p class="TanjaK">- Tanja Kaleovski</p>
     </article>
   </section>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/hydCKuxKdgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 </MainLayout>
 
 <style>
+
+  .video{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+margin-bottom: 2rem;
+  }
+
+  iframe{
+    width: 560px; 
+  height: 315px; 
+  }
   section {
     overflow: hidden;
     background-color: #eee7df;
@@ -67,6 +84,11 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   @media screen and (min-width: 800px) {
+
+    iframe{
+    width: 876px; 
+  height: 493px; 
+  }
     .TanjaBlob {
       width: 70%;
       order: 2;
