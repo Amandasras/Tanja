@@ -2,6 +2,7 @@
 import Navigation from "../components/Navigation.astro";
 // import "../styles/style.css";
 import Footer from "../components/Footer.astro";
+const {TanjaKelaovski} = Astro.props
 ---
 
 <html lang="en">
@@ -10,11 +11,12 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Layout</title>
+    <title>{TanjaKelaovski} Tanja Kelaovski</title>
   </head>
   <body>
     <Navigation />
     <main>
+      
       <slot />
     </main>
     <Footer />
